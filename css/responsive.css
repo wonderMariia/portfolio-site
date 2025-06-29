@@ -1,0 +1,465 @@
+/* Mobile First Responsive Design */
+
+/* Base styles (mobile first) */
+@media (max-width: 767px) {
+    .main-wrapper {
+        padding: var(--spacing-sm);
+    }
+
+    .site-title {
+        font-size: var(--font-size-xxl);
+    }
+
+    .welcome-message {
+        padding: var(--spacing-md);
+    }
+
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .skills-grid,
+    .case-studies-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+}
+
+/* Tablet (768px and up) */
+@media (min-width: 768px) {
+    .main-wrapper {
+        padding: var(--spacing-md);
+    }
+
+    .site-title {
+        font-size: var(--font-size-xxxl);
+    }
+
+    .welcome-message {
+        padding: var(--spacing-lg);
+    }
+
+    .case-studies-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+    .main-wrapper {
+        padding: var(--spacing-lg);
+    }
+
+    .case-studies-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Print styles */
+@media print {
+    .main-wrapper {
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .header,
+    .profile-section,
+    .case-study-card {
+        border: 1px solid var(--color-border);
+        box-shadow: none;
+    }
+
+    .nav-links,
+    .contact-link {
+        display: none;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* Mobile-specific adjustments (below 768px) */
+@media (max-width: 767px) {
+    .main-wrapper {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .site-title {
+        font-size: var(--font-size-xxl);
+    }
+    
+    .welcome-message {
+        padding: var(--spacing-sm);
+    }
+    
+    .welcome-message p {
+        font-size: var(--font-size-base);
+    }
+    
+    .profile-section {
+        padding: var(--spacing-md);
+    }
+    
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .expertise-list {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xs);
+    }
+    
+    .expertise-list li {
+        padding: var(--spacing-sm);
+    }
+    
+    .skills-grid {
+        gap: var(--spacing-xs);
+    }
+    
+    .skill-tag {
+        font-size: var(--font-size-small);
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .nav-link {
+        flex-direction: row;
+        justify-content: flex-start;
+        min-width: auto;
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+    
+    .nav-icon {
+        font-size: var(--font-size-large);
+    }
+    
+    .case-studies-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .case-study-card {
+        padding: var(--spacing-md);
+    }
+    
+    .skills-tools-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .goals-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .goals-column {
+        padding: var(--spacing-md);
+    }
+    
+    .value-proposition {
+        padding: var(--spacing-md);
+    }
+    
+    .expertise-box {
+        padding: var(--spacing-md);
+    }
+    
+    .expertise-box h2 {
+        font-size: var(--font-size-large);
+    }
+    
+    .section-header {
+        font-size: var(--font-size-large);
+    }
+    
+    .case-studies h2,
+    .goals-backlog h2 {
+        font-size: var(--font-size-xl);
+    }
+}
+
+/* Small mobile adjustments (below 480px) */
+@media (max-width: 479px) {
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .header {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .site-title {
+        font-size: var(--font-size-xl);
+    }
+    
+    .main-content {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .profile-image {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .contact-link {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: var(--font-size-small);
+    }
+    
+    .nav-link {
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+    
+    .nav-icon {
+        font-size: var(--font-size-base);
+    }
+    
+    .case-study-card,
+    .value-proposition,
+    .profile-section,
+    .goals-column {
+        padding: var(--spacing-sm);
+    }
+    
+    .expertise-box {
+        padding: var(--spacing-sm);
+    }
+    
+    .expertise-box h2 {
+        font-size: var(--font-size-base);
+    }
+    
+    .skills-grid {
+        justify-content: center;
+    }
+    
+    .skill-tag {
+        font-size: var(--font-size-small);
+        padding: 4px var(--spacing-xs);
+    }
+    
+    .main-wrapper {
+        padding: 0;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 600px) and (orientation: landscape) {
+    .header {
+        padding: var(--spacing-md) 0;
+    }
+    
+    .site-title {
+        font-size: var(--font-size-xl);
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .welcome-message {
+        padding: var(--spacing-sm);
+    }
+    
+    .welcome-message p {
+        font-size: var(--font-size-base);
+    }
+    
+    .main-content {
+        padding: var(--spacing-md) 0;
+    }
+    
+    .layout-grid {
+        gap: var(--spacing-md);
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .profile-image {
+        border-width: 2px;
+    }
+    
+    .case-study-card {
+        border-left-width: 2px;
+    }
+    
+    .goal-card {
+        border-left-width: 2px;
+    }
+}
+
+/* Responsive Styles */
+
+/* Large Screens (1200px and up) */
+@media (min-width: 1200px) {
+    :root {
+        --container-max-width: 1140px;
+    }
+}
+
+/* Medium Screens (992px to 1199px) */
+@media (max-width: 1199px) {
+    :root {
+        --container-max-width: 960px;
+        --font-size-xxxl: 42px;
+        --font-size-xxl: 28px;
+        --font-size-xl: 22px;
+    }
+
+    .case-studies-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablet (768px to 991px) */
+@media (max-width: 991px) {
+    :root {
+        --container-max-width: 720px;
+        --spacing-xxl: 48px;
+        --spacing-xl: 36px;
+    }
+
+    .site-title {
+        font-size: var(--font-size-xxl);
+    }
+
+    .welcome-message {
+        max-width: 100%;
+    }
+
+    .skills-tools-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .goals-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile Large (576px to 767px) */
+@media (max-width: 767px) {
+    :root {
+        --container-max-width: 540px;
+        --font-size-xxxl: 36px;
+        --font-size-xxl: 24px;
+        --font-size-xl: 20px;
+        --spacing-xl: 32px;
+        --spacing-lg: 24px;
+    }
+
+    .header {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .profile-section {
+        padding: var(--spacing-lg);
+    }
+
+    .case-studies-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        grid-template-columns: 1fr;
+    }
+
+    .goals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile Small (575px and down) */
+@media (max-width: 575px) {
+    :root {
+        --font-size-base: 15px;
+        --font-size-large: 16px;
+        --spacing-md: 16px;
+    }
+
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .contact-info {
+        width: 100%;
+        max-width: none;
+    }
+
+    .tech-list li {
+        padding: var(--spacing-sm);
+        padding-left: var(--spacing-lg);
+    }
+
+    .case-study-card {
+        padding: var(--spacing-md);
+    }
+
+    .goals-column {
+        padding: var(--spacing-md);
+    }
+}
+
+/* Print Styles */
+@media print {
+    :root {
+        --color-primary: #000000;
+        --color-secondary: #666666;
+        --color-text: #000000;
+        --color-text-light: #333333;
+        --color-background: #ffffff;
+        --color-surface: #ffffff;
+        --color-border: #cccccc;
+    }
+
+    body {
+        background: var(--color-background);
+    }
+
+    .container {
+        width: 100%;
+        max-width: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header,
+    .profile-section,
+    .case-study-card,
+    .goals-column {
+        box-shadow: none;
+        border: 1px solid var(--color-border);
+    }
+
+    .nav-links,
+    .contact-link {
+        display: none;
+    }
+} 
