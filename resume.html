@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Mariia Riabushenko</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .resume-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+            padding-top: 32px;
+        }
+        .resume-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            letter-spacing: -0.01em;
+        }
+        .download-btn {
+            background: #FF69B4;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 12px 28px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: background 0.2s, color 0.2s;
+        }
+        .download-btn:hover {
+            background: #e055a1;
+            color: #fff;
+        }
+        .resume-viewer {
+            width: 100%;
+            min-height: 80vh;
+            border: 1.5px solid var(--color-border);
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            background: #fff;
+        }
+        @media (max-width: 700px) {
+            .resume-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 18px;
+            }
+            .download-btn {
+                width: 100%;
+                padding: 12px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="resume-header">
+            <span class="resume-title">Resume</span>
+            <a href="images/Resume - Riabushenko Mariia.pdf" download class="download-btn">Download PDF</a>
+        </div>
+        <embed src="images/Resume - Riabushenko Mariia.pdf" type="application/pdf" class="resume-viewer" />
+    </div>
+</body>
+</html> 

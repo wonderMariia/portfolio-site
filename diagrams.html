@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagrams | Mariia Riabushenko Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            padding: var(--spacing-xs) var(--spacing-md);
+            background: none;
+            color: var(--color-primary);
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: var(--font-weight-medium);
+            border: 1px solid var(--color-primary);
+            font-size: var(--font-size-small);
+            transition: var(--transition-normal);
+            position: absolute;
+            top: var(--spacing-md);
+            left: var(--spacing-md);
+            z-index: 2;
+        }
+        
+        .back-link:hover {
+            background: var(--color-primary);
+            color: var(--color-background);
+            border-color: var(--color-primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="main-wrapper">
+        <header class="header">
+            <a href="index.html" class="back-link">← Back to Portfolio</a>
+            <div class="banner">
+                <div class="container header-flex">
+                    <div class="header-info">
+                        <h1 class="site-title">Diagrams</h1>
+                        <div style="font-size: 0.9rem; color: #666; margin-top: 8px; font-style: italic;">This site? 100% me + Cursor magic ❤️ Let's explore!</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main-content">
+            <div class="container">
+                <section class="diagrams-intro" style="margin-bottom: 32px;">
+                    <p style="font-size: 1.1rem; color: #222; max-width: 700px; margin: 0 auto; text-align: center;">
+                        These diagrams were created a few years ago, before the adoption of Generative AI in my workflow. Today, I take a more advanced approach, leveraging prompt engineering best practices to generate diagrams efficiently using tools like Miro, Gemini 2.5 Pro, Claude, and ChatGPT.
+                    </p>
+                </section>
+                <section class="diagram-sample" style="margin-bottom: 40px;">
+                    <h2 style="color: #111; font-size: 1.5rem; font-weight: 600; margin-bottom: 16px;">Business Process Diagram (BPMN)</h2>
+                    <img src="images/BPMN.png" alt="Business Process Diagram (BPMN)" class="diagram-img" data-full="images/BPMN.png" style="width:100%; max-width:900px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); background: #fff; display: block; margin: 0 auto; cursor: pointer;" />
+                </section>
+                <section class="diagram-sample" style="margin-bottom: 40px;">
+                    <h2 style="color: #111; font-size: 1.5rem; font-weight: 600; margin-bottom: 16px;">State Diagram</h2>
+                    <img src="images/state diagram.png" alt="State Diagram" class="diagram-img" data-full="images/state diagram.png" style="width:100%; max-width:900px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); background: #fff; display: block; margin: 0 auto; cursor: pointer;" />
+                </section>
+                <section class="diagram-sample" style="margin-bottom: 40px;">
+                    <h2 style="color: #111; font-size: 1.5rem; font-weight: 600; margin-bottom: 16px;">Retail shipment</h2>
+                    <img src="images/Retail shopment.png" alt="Retail shipment" class="diagram-img" data-full="images/Retail shopment.png" style="width:100%; max-width:900px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); background: #fff; display: block; margin: 0 auto; cursor: pointer;" />
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for full-screen diagram -->
+    <div id="diagram-modal" class="diagram-modal">
+        <span class="diagram-modal-close" id="diagram-modal-close">&times;</span>
+        <img class="diagram-modal-content" id="diagram-modal-img" src="" alt="Full Diagram" />
+    </div>
+
+    <script>
+    // Modal logic for full-screen diagram view
+    const modal = document.getElementById('diagram-modal');
+    const modalImg = document.getElementById('diagram-modal-img');
+    const closeBtn = document.getElementById('diagram-modal-close');
+    document.querySelectorAll('.diagram-img').forEach(img => {
+        img.addEventListener('click', function() {
+            modal.style.display = 'flex';
+            modalImg.src = this.getAttribute('data-full');
+            modalImg.alt = this.alt;
+        });
+    });
+    closeBtn.onclick = function() {
+        modal.style.display = 'none';
+        modalImg.src = '';
+    };
+    modal.onclick = function(e) {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            modalImg.src = '';
+        }
+    };
+    </script>
+</body>
+</html> 

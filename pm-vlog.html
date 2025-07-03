@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wonder Mariia's Vlog – AI Trends Overview</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .vlog-banner-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto 0 auto;
+    }
+    .vlog-banner {
+      width: 100vw;
+      max-width: 1200px;
+      height: 240px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      background: #f8f6f2;
+      border-radius: 32px;
+      margin: 0 auto 0 auto;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+    }
+    .vlog-header {
+      text-align: center;
+      margin: 0 0 32px 0;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      letter-spacing: -0.01em;
+      padding-top: 18px;
+    }
+    .vlog-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 16px 48px 16px;
+    }
+    .vlog-article {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      margin-bottom: 40px;
+      padding: 32px 24px;
+      transition: box-shadow 0.2s;
+    }
+    .vlog-article h2 {
+      font-size: 1.4rem;
+      color: var(--color-primary);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+    .vlog-article img, .vlog-article iframe {
+      display: block;
+      margin: 24px auto 0 auto;
+      max-width: 100%;
+      border-radius: 8px;
+      background: #f6f7f9;
+    }
+    .yt-btn {
+      display: inline-block;
+      margin-top: 18px;
+      background: #FF0000;
+      color: #fff;
+      font-weight: 600;
+      padding: 10px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background 0.2s;
+    }
+    .yt-btn:hover {
+      background: #c00;
+    }
+    .vlog-diagram {
+      margin-top: 32px;
+      margin-bottom: 0;
+      display: block;
+      max-width: 480px;
+      width: 100%;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    @media (max-width: 900px) {
+      .vlog-banner { height: 120px; max-width: 100vw; }
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="back-to-portfolio">← Back to Portfolio</a>
+  <div class="vlog-banner-wrapper" style="display:flex;justify-content:center;margin:0 auto 0 auto;">
+    <img src="images/banner.png" alt="Wonder Mariia's Vlog Banner" class="vlog-banner" />
+  </div>
+  <div class="vlog-header">Wonder Mariia's Vlog – AI Trends Overview</div>
+  <div class="vlog-content">
+    <ul class="vlog-article-list">
+      <li class="vlog-article-item">
+        <a href="pm-vlog-article.html?article=ai-difference" class="vlog-article-link">AI Models, Assistants, Agents, Taskers: Know the Difference</a>
+      </li>
+      <li class="vlog-article-item">
+        <a href="pm-vlog-article.html?article=prompt-engineering" class="vlog-article-link">Mastering Prompt Engineering: How to Make AI Work for You (Not the Other Way Around)</a>
+      </li>
+      <li class="vlog-article-item">
+        <a href="pm-vlog-article.html?article=ai-use-cases" class="vlog-article-link">Most Common AI Agent Use Cases</a>
+      </li>
+      <li class="vlog-article-item">
+        <a href="pm-vlog-article.html?article=rovo-chat" class="vlog-article-link">Atlassian Rovo Chat: How Product Managers Can Boost Productivity with AI</a>
+      </li>
+      <li class="vlog-article-item">
+        <a href="pm-vlog-article.html?article=make-voice-assistant" class="vlog-article-link">Make.com: Using No Coding Platform to Build Release Notes Voice Assistant</a>
+      </li>
+    </ul>
+  </div>
+  <script>
+    // Accordion logic for articles
+    document.querySelectorAll('.vlog-article-item').forEach(item => {
+      item.addEventListener('click', function(e) {
+        if (e.target.classList.contains('vlog-article-title')) {
+          document.querySelectorAll('.vlog-article-item').forEach(i => {
+            if (i === item) {
+              const expanded = i.getAttribute('aria-expanded') === 'true';
+              i.setAttribute('aria-expanded', !expanded);
+            } else {
+              i.setAttribute('aria-expanded', 'false');
+            }
+          });
+        }
+      });
+      item.addEventListener('keydown', function(e) {
+        if ((e.key === 'Enter' || e.key === ' ') && document.activeElement === item) {
+          e.preventDefault();
+          document.querySelectorAll('.vlog-article-item').forEach(i => {
+            if (i === item) {
+              const expanded = i.getAttribute('aria-expanded') === 'true';
+              i.setAttribute('aria-expanded', !expanded);
+            } else {
+              i.setAttribute('aria-expanded', 'false');
+            }
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html> 

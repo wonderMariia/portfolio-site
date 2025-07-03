@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobbies | Mariia Riabushenko Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            padding: var(--spacing-xs) var(--spacing-md);
+            background: none;
+            color: var(--color-primary);
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: var(--font-weight-medium);
+            border: 1px solid var(--color-primary);
+            font-size: var(--font-size-small);
+            transition: var(--transition-normal);
+            position: absolute;
+            top: var(--spacing-md);
+            left: var(--spacing-md);
+            z-index: 2;
+        }
+        
+        .back-link:hover {
+            background: var(--color-primary);
+            color: var(--color-background);
+            border-color: var(--color-primary);
+        }
+
+        .hobby-section {
+            margin-bottom: 60px;
+            padding: 20px;
+            background: var(--color-surface);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--color-border);
+        }
+
+        .hobby-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .hobby-image {
+            width: 45%;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .hobby-description {
+            width: 55%;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--color-text);
+        }
+
+        .hobby-title {
+            font-size: 2rem;
+            color: var(--color-primary);
+            margin-bottom: 20px;
+            font-weight: var(--font-weight-semibold);
+        }
+
+        @media (max-width: 768px) {
+            .hobby-content {
+                flex-direction: column;
+            }
+
+            .hobby-image, .hobby-description {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-wrapper">
+        <header class="header">
+            <a href="index.html" class="back-link">← Back to Portfolio</a>
+            <div class="banner">
+                <div class="container header-flex">
+                    <div class="header-info">
+                        <h1 class="site-title">My Hobbies</h1>
+                        <div style="font-size: 0.9rem; color: #666; margin-top: 8px; font-style: italic;">This site? 100% me + Cursor magic ❤️ Let's explore!</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main-content">
+            <div class="container">
+                <section class="hobby-section">
+                    <h2 class="hobby-title">CrossFit</h2>
+                    <div class="hobby-content">
+                        <img src="images/crossfit.jpeg" alt="Mariia doing CrossFit" class="hobby-image">
+                        <div class="hobby-description">
+                            <p>CrossFit is my biggest passion. It pushes me to set goals, stay resilient, and always finish what I start. Through CrossFit, I've learned to analyze upcoming workouts, develop strategic approaches, and execute them efficiently. It has also helped me find a great community of like-minded people who inspire me to become better every day.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="hobby-section">
+                    <h2 class="hobby-title">Dancing</h2>
+                    <div class="hobby-content">
+                        <img src="images/dancing.jpeg" alt="Creative dancing shoes display" class="hobby-image">
+                        <div class="hobby-description">
+                            <p>Dancing is my creative outlet that allows me to express myself through movement and rhythm. It's a perfect blend of artistry and athleticism that complements my CrossFit training. Through dance, I've learned the importance of grace under pressure and the beauty of self-expression.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="hobby-section">
+                    <h2 class="hobby-title">Reading</h2>
+                    <div class="hobby-content">
+                        <img src="images/reading2.jpeg" alt="Collection of books with Maya Angelou's 'Life Doesn't Frighten Me' prominently displayed" class="hobby-image">
+                        <div class="hobby-description">
+                            <p>Reading is my gateway to continuous learning and personal growth. I'm particularly drawn to books about technology, product management, and personal development. It helps me stay current with industry trends and gather insights that I can apply to both my professional work and personal life.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html> 

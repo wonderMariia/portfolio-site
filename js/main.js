@@ -254,4 +254,60 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     console.log('Portfolio site loaded successfully!');
+    
+    // Highlight active section in side-nav
+    const sectionIds = [
+        'about-me-section',
+        'case-studies-section',
+        'soft-skills-section',
+        'technologies-section',
+        'vlog',
+        'courses-section'
+    ];
+    const sideNavLinks = Array.from(document.querySelectorAll('.side-nav a'));
+    const sectionElements = sectionIds.map(id => document.getElementById(id));
+
+    function setActiveNav() {
+        let index = sectionElements.length - 1;
+        for (let i = 0; i < sectionElements.length; i++) {
+            const rect = sectionElements[i]?.getBoundingClientRect();
+            if (rect && rect.top <= 120) {
+                index = i;
+            }
+        }
+        sideNavLinks.forEach(link => link.classList.remove('active'));
+        if (sideNavLinks[index]) sideNavLinks[index].classList.add('active');
+    }
+    window.addEventListener('scroll', setActiveNav);
+    window.addEventListener('resize', setActiveNav);
+    document.addEventListener('DOMContentLoaded', setActiveNav);
+    
+    // PM Vlog Accordion
+    function setupPMVlogAccordion() {
+        const items = document.querySelectorAll('.pm-vlog-item');
+        items.forEach((item, idx) => {
+            const title = item.querySelector('.pm-vlog-title');
+            // Click or keyboard
+            item.addEventListener('click', (e) => {
+                toggleAccordion(item, items);
+            });
+            item.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleAccordion(item, items);
+                }
+            });
+        });
+        function toggleAccordion(selected, all) {
+            all.forEach((item) => {
+                if (item === selected) {
+                    const expanded = item.getAttribute('aria-expanded') === 'true';
+                    item.setAttribute('aria-expanded', !expanded);
+                } else {
+                    item.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
+    }
+    document.addEventListener('DOMContentLoaded', setupPMVlogAccordion);
 }); 

@@ -1,0 +1,71 @@
+﻿Mastering Prompt Engineering for PMs
+
+
+Why is prompt engineering so important?
+As powerful as GenAI tools are, their performance hinges on one critical element: the human behind the keyboard.
+We’ve entered a new era where prompting is the new programming. You don’t need to code, but you do need to be specific, intentional, and smart about how you communicate with AI.
+Here’s how I break it down:
+The Human Touch Is Non-Negotiable
+AI doesn’t “know” context, bias, or emotional nuance. It generates output based on patterns, not empathy.
+That’s why human oversight is everything:
+* ✅ Accuracy? Needs to be fact-checked.
+* ✅ Relevance? Needs human judgment.
+* ✅ Bias? Needs ethical consideration.
+AI output should be treated as a starting point, not a final product.
+The Anatomy of a Great Prompt
+Let’s use the G.R.A.C.E. formula to build better prompts:
+Step
+	Description
+	Example
+	Goal
+	What do you want to achieve? Give it a goal as a verb to instruct on the expected outcome.
+	
+
+	Role
+	Who is the AI supposed to be? Give it a perspective.
+	You are a product manager.
+	Action
+	What should it do (generate, refine, compare, etc.)?
+	Generate 3 output articles:
+	• LinkedIn as a marketing promotion to the new article highlighting why it is important to check out this article
+	
+
+	
+
+	• PM Vlog as a more detailed article
+	
+
+	
+
+	• Script for 4-5 minute video
+	
+
+	
+
+	Context
+	What background information does it need? Tell more about your project, give previous analysis results, feed the AI with existing project information and ideas.
+	You are working on the new LinkedIn article called 'Mastering prompt engineering'. You also have your own PM vlog where you need to give a more detailed description about prompt engineering. You will be creating a short 4-5 minutes video based on the below information.
+	Explicit format
+	What structure or format are you expecting? Bullet-pointed list, table, heading, sections.
+	Create a Word document titled ‘How to Generate Prompt Engineering’ with cover and closing pages, font Arial 11. Keep the language professional. Do not use jargon.
+	NOTE: Algorithms take your initial thoughts and ideas and try to expand on them based on the instructions you provide. Without clear guidance, your AI assistant will generate content driven purely by its own predictive logic not your intent.
+KISS - keep it simple. Avoid jargon and complex sentence structures. Strive for simple and concise language that accurately conveys your desired output.
+💡 Example:
+“You are a product manager. You are working on the new LinkedIn article called 'Mastering prompt engineering'. You also have your own PM vlog where you need to give a more detailed description about prompt engineering. In addition, you will be creating a short 4-5 minutes video based on the below information. [attach your finding or thoughts you want to include in the article as a plain text or file attachment]
+Generate 3 output articles:
+* LinkedIn as a marketing promotion to the new article highlighting why it is important to check out this article
+* PM Vlog as a more detailed article
+* Script for 4-5 minute video
+Create a Word document titled ‘How to Generate Prompt Engineering’ with cover and closing pages, font Arial 11. Keep the language professional. Do not use jargon.’
+Work with user stories and acceptance criteria
+If you want AI to assist in generating user stories—whether for high-level epics or detailed decomposed tasks—always provide a clear structure. Use the classic format:
+"As a [user], I want to [do something], so that [value/outcome]."
+When it comes to acceptance criteria, be explicit about the format.
+* Do you want it in Gherkin style (Given / When / Then)?
+* Or would you prefer a simple bullet list—ideally no more than 8 ACs, which is widely considered the optimal scope for a user story?
+If your story feels too broad or overloaded, ask the AI to decompose it into smaller, manageable parts. That’s where AI truly shines—turning complexity into clarity.
+And don’t forget: tools like Jira Atlassian Intelligence are purpose-built for this. It can generate user stories and task descriptions based on your team’s historical backlog data, release notes, and even your writing style.
+Prompt well, and AI becomes your most efficient teammate in story refinement.
+Final Thoughts
+As a Product Manager, I see prompt engineering as a core skill, not a niche trick.
+It’s how we’ll design smarter workflows, prototype faster, and enhance user value with less grunt work.

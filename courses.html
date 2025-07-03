@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses & Certifications | Mariia Riabushenko Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            padding: var(--spacing-xs) var(--spacing-md);
+            background: none;
+            color: var(--color-primary);
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: var(--font-weight-medium);
+            border: 1px solid var(--color-primary);
+            font-size: var(--font-size-small);
+            transition: var(--transition-normal);
+            position: absolute;
+            top: var(--spacing-md);
+            left: var(--spacing-md);
+            z-index: 2;
+        }
+        
+        .back-link:hover {
+            background: var(--color-primary);
+            color: var(--color-background);
+            border-color: var(--color-primary);
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            padding: 20px 0;
+        }
+
+        .course-card {
+            background: var(--color-surface);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--color-border);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .course-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .course-image {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            background: var(--color-surface);
+            border-bottom: 1px solid var(--color-border);
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .course-image:hover {
+            opacity: 0.9;
+        }
+
+        .course-content {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            min-height: 200px;
+        }
+
+        .course-title {
+            font-size: 1.25rem;
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-primary);
+            margin-bottom: 8px;
+        }
+
+        .course-details {
+            flex-grow: 1;
+            margin-bottom: 16px;
+        }
+
+        .course-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 16px;
+            background: var(--color-secondary);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+            cursor: pointer;
+            border: none;
+            align-self: flex-start;
+            margin-top: auto;
+        }
+
+        .course-link:hover {
+            background: var(--color-primary);
+        }
+
+        .course-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--color-border);
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+            flex-wrap: wrap;
+        }
+
+        .course-meta span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .grade-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 8px;
+            background: var(--color-secondary);
+            color: white;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: var(--font-weight-medium);
+        }
+
+        @media (max-width: 768px) {
+            .courses-grid {
+                grid-template-columns: 1fr;
+                padding: 16px;
+            }
+        }
+
+        /* Modal styles */
+        .grade-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .grade-modal-content {
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: var(--border-radius);
+            background: white;
+        }
+
+        .grade-modal-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .grade-modal-close:hover {
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-wrapper">
+        <header class="header">
+            <a href="index.html" class="back-link">← Back to Portfolio</a>
+            <div class="banner">
+                <div class="container header-flex">
+                    <div class="header-info">
+                        <h1 class="site-title">Courses & Certifications</h1>
+                        <div style="font-size: 0.9rem; color: #666; margin-top: 8px; font-style: italic;">This site? 100% me + Cursor magic ❤️ Let's explore!</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main-content">
+            <div class="container">
+                <div class="courses-grid">
+                    <!-- CSPO Certification -->
+                    <div class="course-card">
+                        <div class="course-content">
+                            <h2 class="course-title">Certified Scrum Product Owner®</h2>
+                            <div class="course-details">
+                                <p>Scrum Alliance Certification</p>
+                                <div class="course-meta">
+                                    <span>📅 Valid until: Aug 2026</span>
+                                    <span>🔖 Badge ID: 1984447</span>
+                                </div>
+                            </div>
+                            <a href="https://bcert.me/swpjtabhh" target="_blank" rel="noopener" class="course-link">View Certificate →</a>
+                        </div>
+                    </div>
+
+                    <!-- University of Toronto Course -->
+                    <div class="course-card">
+                        <div class="course-content">
+                            <h2 class="course-title">Foundations of Project Management</h2>
+                            <div class="course-details">
+                                <p>University of Toronto - School of Continuing Studies</p>
+                                <div class="course-meta">
+                                    <span>📅 Sep-Dec 2024</span>
+                                    <span>⏱️ 36 Hours</span>
+                                    <span class="grade-badge">99%</span>
+                                </div>
+                            </div>
+                            <button class="course-link" onclick="openModal('images/courses/Grade.png')">View Certificate →</button>
+                        </div>
+                    </div>
+
+                    <!-- AI for Product Owners -->
+                    <div class="course-card">
+                        <div class="course-content">
+                            <h2 class="course-title">AI for Product Owners</h2>
+                            <div class="course-details">
+                                <p>Scrum Alliance Advanced Training</p>
+                                <div class="course-meta">
+                                    <span>🤖 AI Specialization</span>
+                                    <span>🎓 Scrum Alliance</span>
+                                </div>
+                            </div>
+                            <a href="https://bcert.me/sajxsllmr" target="_blank" rel="noopener" class="course-link">View Certificate →</a>
+                        </div>
+                    </div>
+
+                    <!-- OKR Metrics -->
+                    <div class="course-card">
+                        <div class="course-content">
+                            <h2 class="course-title">OKR Metrics</h2>
+                            <div class="course-details">
+                                <p>Udemy Professional Certification</p>
+                                <div class="course-meta">
+                                    <span>📊 Performance Metrics</span>
+                                    <span>🎯 Goal Setting</span>
+                                </div>
+                            </div>
+                            <button class="course-link" onclick="openModal('images/courses/OKRs.png')">View Certificate →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for full-screen grade view -->
+    <div id="grade-modal" class="grade-modal">
+        <span class="grade-modal-close">&times;</span>
+        <img class="grade-modal-content" id="grade-modal-img" src="" alt="Full Grade Report">
+    </div>
+
+    <script>
+        const modal = document.getElementById('grade-modal');
+        const modalImg = document.getElementById('grade-modal-img');
+        const closeBtn = document.querySelector('.grade-modal-close');
+
+        function openModal(imgSrc) {
+            modal.style.display = 'flex';
+            modalImg.src = imgSrc;
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+            modalImg.src = '';
+        }
+
+        closeBtn.onclick = closeModal;
+        modal.onclick = function(e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        };
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.style.display === 'flex') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html> 

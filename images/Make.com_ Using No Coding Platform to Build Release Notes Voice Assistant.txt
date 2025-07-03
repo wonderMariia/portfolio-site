@@ -1,0 +1,141 @@
+﻿TL;DR:
+Below is my first AI tasker description, created to help me automate Release Notes with the ChatGPT + Google Sheets + Google Docs (via Make.com)help of Telegram + Deepgram +   
+Context:
+I felt behind on the AI trend and wanted to learn about no-code, AI-driven solutions. After some reflection, I realized I had a work process that could benefit from automation. This led me to develop the Release Notes AI assistant.
+Challenges are highlighted with pink colour to help you identify what issues I faced when working with ChatGPT.
+<aside> 💡
+EXTREMELY IMPORTANT:
+When working with Make, save all your changes by pressing SAVE icon at the bottom. It does not do automatic saves and you risk losing your integration, same as I lost it having to re-create my integration almost from scratch.
+</aside>
+One last thing before we start, make sure you run the automation every time you create a new module to identify if the connection is successful. You might encounter an error, and it is better to fix it right away.
+Problem statement:
+I work in a small startup where we use various services without advanced subscriptions. My regular task is sharing release notes in Slack. Currently, I draft the content in Google Docs to refine it before copying it to the chat and then re-refining after ChatGPT refinement. Since I'm not always at my computer and writing these notes is time-consuming—even when using ChatGPT prompts—I needed a better solution.
+Solution:
+🔁 End-to-End Voice-to-Release-Notes Integration
+Built with: Telegram + Deepgram + ChatGPT + Google Sheets + Google Docs (via Make.com)
+1. Telegram Bot (Trigger)
+* What: Receives an audio voice message.
+* Why: This is your starting point—the input source for your release notes workflow.
+Create a chatbot:
+1. In Telegram search field type in /BotFather.
+2. Open the chat and in the message field type /newbot.
+3. Add name and nickname.
+4. Save the chatbot token - you will need it for further integration in Make.
+5. Create a module in Make: Telegram - Watch updates.
+6. Press on Telegram module and add webhook connection by using the token for the Telegram chat.
+________________
+
+
+2. HTTP Module #1 – Get File ID
+* What: Sends a request to Telegram to retrieve the file ID for the voice message.
+* Why: You need the file ID to fetch the actual audio content.
+Connect to Telegram to get the file_id:
+1. Create an HTTPS module - Make a request.
+2. Method = GET.
+3. URL = https://api.telegram.org/bot[YOUR BOT TOKEN]/getFile?file_id={{3.message.voice.file_id}} where {{}} = label to the Telegram voice file (.oga).
+4. Set up the filter between the first and the second module - press tool icon, Label = Only Voice, Basic operators = exists, Condition = Message.content.voice
+________________
+
+
+3. HTTP Module #2 – Get Compressed File
+* What: Uses the file ID to request and download the audio file.
+* Why: You need the audio file in binary format to send to Deepgram for transcription.
+Connect to get data file path:
+1. Create an HTTPS module - Make a request.
+2. Method = GET.
+3. URL = https://api.telegram.org/file/bot[YOUR BOT TOKEN]/{5.data.result.file_path}} where {{}} = label to the file_path from the previous webhook.
+________________
+
+
+4. HTTP Module #3 – Send Audio to Deepgram
+* What: POSTs the audio to Deepgram’s API using an Authorization token.
+* Why: This transcribes the audio into text so it can be processed by ChatGPT.
+Connect to Deepgram:
+1. Go to https://console.deepgram.com/
+2. Create an account ad create an API Key.
+3. NOTE!: Before closing the popup window with the API key, save your API key to a secure place. You will NOT have access to it after you close the window.
+4. Create HTTP module - Make a request.
+5. URL = https://api.deepgram.com/v1/listen
+6. Method = POST.
+7. Header: Name = Authorization, Value = Token YOUR DEEPGRAM TOKEN ID
+The API key for SpeechText expires in a month and their server blocked my connection for unknown reason. I switched to Deepgram instead—they also offered customizable API key expiration, so I set it to never expire.
+________________
+
+
+5. ChatGPT Module #4
+System Role (Message 1)
+* What: Sends system instructions like “You are a product assistant helping summarize voice-based release updates. Turn the transcript into clear, concise release notes in plain text. Format it as a single paragraph with short, punchy bullet-style statements. Do not return a list, JSON, or objects—just clean text.”
+* Why: Guides the behavior of ChatGPT to output clean, professional summaries.
+________________
+
+
+User Role (Message 2)
+* What: Sends the transcribed text to ChatGPT.
+* Why: This is the actual transcript content you want summarized.
+Create ChatGPT module
+1. Go to https://platform.openai.com/ > API Keys.
+2. Generate an API key and save it, same as for the Deepgram.
+3. Module in Make: OpenAI (ChatGPT, Whisper, DALL-E module) - Create a Completion (Prompt) (GPT and o1, o3 Models).
+4. Add connection using your OpenAI token.
+5. Model = gpt-3.5-turbo
+6. Message 1 = Role = Assistant.
+7. Text content: You are a product assistant helping summarize voice-based release updates. Turn the transcript into clear, concise release notes in plain text. Format it as a single paragraph with short, punchy bullet-style statements. Do not return a list, JSON, or objects—just clean text.
+8. Message 2 > Role = User.
+9. Text content = {{29.data.results.channels[].alternatives[].transcript}} where {{}} is the label to Deepgram transcript.
+________________
+
+
+7. Google Sheets – Add Row
+* What: Appends the date, transcript, and ChatGPT summary to a new row.
+* Why: Stores your release notes content in a central, easy-to-scan format.
+My first attempt was connect to Notion database, and it failed. At first, I couldn’t establish a connection between Notion and Make. Takeaways:
+* Your Notion database must be created NOT in private space.
+* If created in team space you must be the owner of both workspace and team space.
+Also, when ChatGPT assistant was pushing the results to Notion database, it constatntly failed with the below error attached. I gave up and connected Google Sheets instead.
+Create database and map the fields
+1. Create Google sheet and name the columns according to the structure (e.g. Version, Date added, Transcript, Release Notes Refined, Status, etc.).
+
+2. Add Google Sheets module - Add a row.
+
+3. Connect to your Google account, select the path to the database file.
+
+4. Map the columns in the Make module according to the video instruction.
+
+
+
+The error I faced when attempting to connect to my personal Gmail.
+
+
+
+ChatGPT response: Ah yes — this is a known limitation! Google no longer allows connecting personal Gmail accounts (ending in @gmail.com) to third-party services like Make via standard login due to tightened security on OAuth and SMTP access.
+
+
+😬 Why it fails:
+
+   * Personal Gmail accounts do not support "less secure apps" anymore - I still do not know of that is true or ChatGT misguided me…
+________________
+
+
+8. Google Sheets – Search Rows (Advanced)
+   * What: On schedule, looks for rows where Status = Draft.
+   * Why: Acts as a trigger for the next steps (e.g., generating a Google Doc) based on human approval.
+Create Google search rows module to trigger document creation
+   1. Add Google Sheets module - Search Rows (Advanced).
+   2. Connect to the same Google sheets database.
+   3. Add query: select * where E = 'Draft’ meaning status is Draft. You can select any other trigger for the system to create the document.
+________________
+
+
+9. Google Docs – Create Document
+   * What: Generates a clean document using the Release Notes content from Google Sheets.
+   * Why: Review by a human (me) and copy to Slack. I should potentially consider creating module #10 for Slack integration.
+Create Google document with ChatGPT release notes
+   1. Add Google Docs module - Create a doc.
+   2. Connect to the folder where the document will be created.
+   3. Add a name - customize it the way you like.
+   4. Add a content - I used HTML code where Summary {{}} is connection to Google Sheets module where we add a row (D is status column):
+<h2>🚀 Release Notes</h2> <p><strong>Date:</strong> {{formatDate(now; "YYYY-MM-DD")}}</p> <p><strong>Summary:</strong></p> <p>{{32.D}}</p>
+________________
+
+
+If you cannot find labels represented as {{}} in my instruction, run the flow. It sometimes requires the reference from the real example. My suggestion is to run the flow every time you set up a module to make sure it does not give you errors, and if it does, fix it right away.

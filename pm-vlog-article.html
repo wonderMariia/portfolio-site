@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PM Vlog Article</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .article-content { max-width: 700px; margin: 32px auto; background: #fff; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); padding: 32px 24px; }
+    .article-header { font-size: 2rem; font-weight: 800; color: var(--color-primary); margin-bottom: 24px; }
+    .article-back { display: inline-block; margin-bottom: 24px; color: #2D3047; text-decoration: none; font-weight: 600; font-size: 1.1rem; }
+    .article-back:hover { color: #E0A458; text-decoration: underline; }
+    .ai-table { margin-bottom: 24px; }
+    .yt-btn { display: inline-block; margin-top: 18px; background: #FF0000; color: #fff; font-weight: 600; padding: 10px 22px; border-radius: 8px; text-decoration: none; font-size: 1rem; transition: background 0.2s; }
+    .yt-btn:hover { background: #c00; }
+    .vlog-diagram { margin-top: 32px; margin-bottom: 0; display: block; max-width: 480px; width: 100%; border-radius: 10px; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+    @media (max-width: 600px) { .article-content { padding: 12px 2px; } .article-header { font-size: 1.2rem; } }
+  </style>
+</head>
+<body>
+  <a href="pm-vlog.html" class="article-back">← Back to PM Vlog</a>
+  <div class="article-content" id="article-content"></div>
+  <script>
+    function getQueryParam(name) {
+      const url = new URL(window.location.href);
+      return url.searchParams.get(name);
+    }
+    const article = getQueryParam('article');
+    const contentDiv = document.getElementById('article-content');
+    if (article === 'ai-difference') {
+      contentDiv.innerHTML = `
+        <div class="article-header">AI Models, Assistants, Agents, Taskers: Know the Difference</div>
+        <div class="ai-card-desc" style="margin-bottom:18px;">
+          As a Product Manager, I find myself learning more about AI every day, and I realized that even in the tech world, many people still mix up basic AI definitions. Terms like <b>"AI agent," "AI model," "AI assistant," and "AI tasker"</b> are thrown around casually, but they mean very different things. So, I decided to dig deeper and create a simple breakdown that could help other PMs navigate this AI-powered era more confidently.
+        </div>
+        <div class="ai-table-wrapper">
+          <table class="ai-table">
+            <thead>
+              <tr><th>Term</th><th>What It Is</th><th>Key Function</th><th>Example</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>AI Model</td><td>The "brain" trained on massive datasets to make predictions or generate content.</td><td>Provides intelligence; analyzes or generates outputs.</td><td>GPT-4, Gemini, Claude</td></tr>
+              <tr><td>AI Assistant</td><td>A user-facing tool that uses an AI model to assist with tasks, usually through conversation.</td><td>Helps users complete tasks; interacts in natural language.</td><td>ChatGPT, Siri, Google Assistant</td></tr>
+              <tr><td>AI Agent</td><td>An independent system that plans, reasons, and takes actions toward achieving a goal.</td><td>Acts autonomously across multiple steps.</td><td>AutoGPT, BabyAGI, MultiOn AI</td></tr>
+              <tr><td>AI Tasker</td><td>Executes specific assigned tasks; does not independently plan beyond the given instruction.</td><td>Executes individual or small sets of tasks.</td><td>Zapier bots, Make.com AI scenarios</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <img src="images/AI assistant vs model.png" alt="AI Assistant vs Model Diagram" class="vlog-diagram" />
+        <div class="ai-card-desc" style="margin-top:18px;">
+          Understanding the basic differences between AI models, assistants, agents, and taskers is crucial for product managers today. As we design features, prioritize AI integrations, or evaluate new solutions, being clear about <b>"what type of AI"</b> we're building with can change the entire user experience.<br><br>I'm still learning every day, but this simple breakdown has already helped me ask better questions, set clearer goals, and avoid some common buzzword confusion.
+        </div>
+      `;
+    } else if (article === 'prompt-engineering') {
+      contentDiv.innerHTML = `
+        <div class="article-header">Mastering Prompt Engineering for PMs</div>
+        <div class="ai-card-desc" style="margin-bottom:18px;">
+          <h3>Why is prompt engineering so important?</h3>
+          <p>As powerful as GenAI tools are, their performance hinges on one critical element: the human behind the keyboard.<br>
+          We've entered a new era where prompting is the new programming. You don't need to code, but you do need to be specific, intentional, and smart about how you communicate with AI.</p>
+          <h3>The Human Touch Is Non-Negotiable</h3>
+          <p>AI doesn't "know" context, bias, or emotional nuance. It generates output based on patterns, not empathy.<br>
+          That's why human oversight is everything:</p>
+          <ul>
+            <li>✅ <b>Accuracy?</b> Needs to be fact-checked.</li>
+            <li>✅ <b>Relevance?</b> Needs human judgment.</li>
+            <li>✅ <b>Bias?</b> Needs ethical consideration.</li>
+          </ul>
+          <p style="color:#c00;font-weight:600;">AI output should be treated as a starting point, not a final product.</p>
+          <h3>The Anatomy of a Great Prompt</h3>
+          <p>Let's use the <b>G.R.A.C.E.</b> formula to build better prompts:</p>
+          <table class="ai-table">
+            <thead>
+              <tr><th>Step</th><th>Description</th><th>Example</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Goal</td><td>What do you want to achieve? Give it a goal as a verb to instruct on the expected outcome.</td><td></td></tr>
+              <tr><td>Role</td><td>Who is the AI supposed to be? Give it a perspective.</td><td>You are a product manager.</td></tr>
+              <tr><td>Action</td><td>What should it do (generate, refine, compare, etc.)?</td><td>Generate 3 output articles:<ul><li>LinkedIn as a marketing promotion to the new article highlighting why it is important to check out this article</li><li>PM Vlog as a more detailed article</li><li>Script for 4-5 minute video</li></ul></td></tr>
+              <tr><td>Context</td><td>What background information does it need? Tell more about your project, give previous analysis results, feed the AI with existing project information and ideas.</td><td>You are working on the new LinkedIn article called 'Mastering prompt engineering'. You also have your own PM vlog where you need to give a more detailed description about prompt engineering. You will be creating a short 4-5 minutes video based on the below information.</td></tr>
+              <tr><td>Explicit format</td><td>What structure or format are you expecting? Bullet-pointed list, table, heading, sections.</td><td>Create a Word document titled 'How to Generate Prompt Engineering' with cover and closing pages, font Arial 11. Keep the language professional. Do not use jargon.</td></tr>
+            </tbody>
+          </table>
+          <p><b>NOTE:</b> Algorithms take your initial thoughts and ideas and try to expand on them based on the instructions you provide. Without clear guidance, your AI assistant will generate content driven purely by its own predictive logic not your intent.</p>
+          <p><b>KISS</b> - keep it simple. Avoid jargon and complex sentence structures. Strive for simple and concise language that accurately conveys your desired output.</p>
+          <h4>💡 Example:</h4>
+          <pre style="background:#f8f6f2;padding:12px 16px;border-radius:8px;white-space:pre-line;font-size:1rem;">You are a product manager. You are working on the new LinkedIn article called 'Mastering prompt engineering'. You also have your own PM vlog where you need to give a more detailed description about prompt engineering. In addition, you will be creating a short 4-5 minutes video based on the below information. [attach your finding or thoughts you want to include in the article as a plain text or file attachment]
+Generate 3 output articles:
+* LinkedIn as a marketing promotion to the new article highlighting why it is important to check out this article
+* PM Vlog as a more detailed article
+* Script for 4-5 minute video
+Create a Word document titled 'How to Generate Prompt Engineering' with cover and closing pages, font Arial 11. Keep the language professional. Do not use jargon.'</pre>
+          <h3>Work with user stories and acceptance criteria</h3>
+          <p>If you want AI to assist in generating user stories—whether for high-level epics or detailed decomposed tasks—always provide a clear structure. Use the classic format:</p>
+          <pre style="background:#f8f6f2;padding:12px 16px;border-radius:8px;white-space:pre-line;font-size:1rem;">As a [user], I want to [do something], so that [value/outcome].</pre>
+          <p>When it comes to acceptance criteria, be explicit about the format.</p>
+          <ul>
+            <li>Do you want it in Gherkin style (Given / When / Then)?</li>
+            <li>Or would you prefer a simple bullet list—ideally no more than 8 ACs, which is widely considered the optimal scope for a user story?</li>
+          </ul>
+          <p>If your story feels too broad or overloaded, ask the AI to decompose it into smaller, manageable parts. That's where AI truly shines—turning complexity into clarity.</p>
+          <p>And don't forget: tools like Jira Atlassian Intelligence are purpose-built for this. It can generate user stories and task descriptions based on your team's historical backlog data, release notes, and even your writing style.</p>
+          <p><b>Prompt well, and AI becomes your most efficient teammate in story refinement.</b></p>
+          <h3>Final Thoughts</h3>
+          <p>As a Product Manager, I see prompt engineering as a core skill, not a niche trick.<br>
+          It's how we'll design smarter workflows, prototype faster, and enhance user value with less grunt work.</p>
+        </div>
+        <a href="https://youtu.be/hjCrdgaOF8I" class="yt-btn" style="margin-bottom:18px;" target="_blank" rel="noopener">Watch on YouTube</a>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/hjCrdgaOF8I" title="YouTube video player" frameborder="0" allowfullscreen style="margin-top:18px;"></iframe>
+      `;
+    } else if (article === 'ai-use-cases') {
+      contentDiv.innerHTML = `
+        <div class="article-summary-card" style="background:#f8f6f2;padding:24px 24px 18px 24px;border-radius:14px;margin-bottom:32px;box-shadow:0 2px 12px rgba(0,0,0,0.04);">
+          <h2 style="margin:0 0 10px 0;font-size:1.4rem;color:#2D3047;font-weight:700;">Most Common AI Agent Use Cases</h2>
+          <p style="margin:0;font-size:1.08rem;">AI agents are transforming how businesses operate, from startups to enterprise giants. Explore the most impactful use cases and see how you can get started today.</p>
+        </div>
+        <div class="ai-card-desc" style="margin-bottom:18px;">
+          <h3 style="margin-top:0;margin-bottom:12px;">What are AI agents actually doing in companies right now?</h3>
+          <div class="usecase-section">
+            <div class="usecase-card"><span class="usecase-icon">💬</span><b>Customer Support & Experience</b><ul>
+              <li>Self-service agents triage, solve, or escalate routine queries on web, mobile, and voice (e.g., Rogers chatbot, Scotiabank phone support).</li>
+              <li>Auto-summaries of live chats/call transcripts for instant context (Uber, Salesforce AgentForce).</li>
+            </ul></div>
+            <div class="usecase-card"><span class="usecase-icon">🚀</span><b>Sales & Marketing Acceleration</b><ul>
+              <li>Lead-qualifying SDR bots, tailored emails, and follow-ups.</li>
+              <li>Personalized promos & product recommendations (Salesforce Copilot, AI21 survey).</li>
+            </ul></div>
+            <div class="usecase-card"><span class="usecase-icon">📚</span><b>Employee Productivity & Knowledge Management</b><ul>
+              <li>Inbox, doc, and video summarizers (Gmail, Gemini for Google Drive).</li>
+              <li>Enterprise copilots answer ad-hoc questions (Microsoft 365, Notion AI).</li>
+            </ul></div>
+            <div class="usecase-card"><span class="usecase-icon">💻</span><b>Software Engineering & DevOps</b><ul>
+              <li>Coding agents that generate code, run tests, and open pull requests (GitHub Copilot, Tracewright).</li>
+              <li>Multi-agent orchestration for devs (Amazon Bedrock).</li>
+            </ul></div>
+            <div class="usecase-card"><span class="usecase-icon">🤖</span><b>Workflow & RPA Automation</b><ul>
+              <li>End-to-end process bots that call APIs, RPA robots, and LLM tools (UiPath Autopilot, Google Workspace Flows).</li>
+            </ul></div>
+            <div class="usecase-card"><span class="usecase-icon">🛡️</span><b>Cyber-Defence & IT Operations</b><ul>
+              <li>Security bots hunt threats, write playbooks, and execute mitigations (SynthAI, Dark Reading).</li>
+            </ul></div>
+            <div class="usecase-card"><span class="usecase-icon">💸</span><b>Finance & Back-Office</b><ul>
+              <li>Invoice capture, expense auditing, and dispute bots (Salesforce Copilot).</li>
+            </ul></div>
+            <div class="usecase-card"><span class="usecase-icon">🧑‍💼</span><b>HR & People Operations</b><ul>
+              <li>Recruiting screeners and onboarding concierges (KPMG study, 60% of enterprises use agents for HR tasks).</li>
+            </ul></div>
+            <div class="usecase-card"><span class="usecase-icon">🚚</span><b>Supply-Chain & Logistics</b><ul>
+              <li>Shipment-status agents, inventory management, and proactive notifications (Salesforce blueprints).</li>
+            </ul></div>
+            <div class="usecase-card"><span class="usecase-icon">📊</span><b>R&D, Analytics & Decision Support</b><ul>
+              <li>Research copilots, experiment protocol writers, and scenario simulators (BCG Global).</li>
+            </ul></div>
+          </div>
+          <hr style="margin:32px 0 24px 0;border:none;border-top:1.5px solid #eee;">
+          <h3 style="margin-bottom:12px;">How are startups using agents?</h3>
+          <div class="startup-usecases">
+            <div class="startup-card"><span class="usecase-icon">🛠️</span><b>Customer Support Agent:</b> Handles 80% of queries, answers FAQs, tracks orders, escalates complex issues.<br><i>Benefits:</i> 24/7 replies, reduced churn, customer insights.</div>
+            <div class="startup-card"><span class="usecase-icon">📧</span><b>Outbound Sales Assistant:</b> Drafts emails, follows up, books meetings, updates CRM.<br><i>Benefits:</i> SDR work at scale, better conversion, warm pipeline.</div>
+            <div class="startup-card"><span class="usecase-icon">📊</span><b>Data Analyst Copilot:</b> Connects to analytics tools, answers business questions.<br><i>Benefits:</i> No full-time data team needed, real-time insights.</div>
+            <div class="startup-card"><span class="usecase-icon">🧠</span><b>Product Research & Ideation Agent:</b> Synthesizes trends, proposes MVP ideas.<br><i>Benefits:</i> Faster validation, finds gaps, great for lean teams.</div>
+            <div class="startup-card"><span class="usecase-icon">🧾</span><b>Finance & Admin Assistant:</b> Manages expenses, invoices, and summaries.<br><i>Benefits:</i> Saves time, keeps founders focused, helps with due diligence.</div>
+            <div class="startup-card"><span class="usecase-icon">🎯</span><b>Startup Co-Founder Bot:</b> Tracks metrics, gives suggestions, reminds deadlines, answers investor questions.<br><i>Benefits:</i> Mini Chief of Staff on a budget.</div>
+          </div>
+          <hr style="margin:32px 0 24px 0;border:none;border-top:1.5px solid #eee;">
+          <h3 style="margin-bottom:12px;">Overall Benefits for Startups</h3>
+          <div class="benefits-table-wrapper" style="overflow-x:auto;">
+            <table class="ai-table" style="background:#f8f6f2;">
+              <thead><tr><th>Benefit</th><th>Why It Matters</th></tr></thead>
+              <tbody>
+                <tr><td>Automates repetitive tasks</td><td>More time for product, customers, growth</td></tr>
+                <tr><td>Reduces cost of hiring</td><td>Get 10x work done with 2x the team</td></tr>
+                <tr><td>Enhances speed to market</td><td>Test, iterate, and learn faster</td></tr>
+                <tr><td>Scales ops before headcount</td><td>Agents grow with you</td></tr>
+                <tr><td>Makes you look bigger</td><td>Polished support and operations build trust</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <hr style="margin:32px 0 24px 0;border:none;border-top:1.5px solid #eee;">
+          <h3 style="margin-bottom:12px;">How Product Teams Typically Get Started</h3>
+          <ol style="margin-left:18px;">
+            <li>Pick one <b>"low-risk, high-volume"</b> task (e.g., FAQ replies, AI regression tests).</li>
+            <li>Wire the agent into a single data source first; expand scope after measuring success.</li>
+            <li>Add human review gates until accuracy stabilizes, then relax thresholds.</li>
+            <li>Track ROI (time saved, error-rate drop) to prioritize the next workflow.</li>
+          </ol>
+        </div>
+      `;
+    } else if (article === 'rovo-chat') {
+      contentDiv.innerHTML = `
+        <div class="article-header">Atlassian Rovo Chat: How Product Managers Can Boost Productivity with AI</div>
+        <div class="ai-card-desc" style="margin-bottom:18px;">
+          <p>Discover how Atlassian Rovo Chat empowers product managers to streamline workflows, automate routine tasks, and leverage AI for smarter decision-making. Watch the video below to see practical tips and real-world examples.</p>
+        </div>
+        <a href="https://www.youtube.com/watch?v=HL3NCTOaGXY" class="yt-btn" style="margin-bottom:18px;" target="_blank" rel="noopener">Watch on YouTube</a>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/HL3NCTOaGXY" title="YouTube video player" frameborder="0" allowfullscreen style="margin-top:18px;"></iframe>
+      `;
+    } else if (article === 'make-voice-assistant') {
+      contentDiv.innerHTML = `
+        <div class="video-section" style="margin-bottom:24px;">
+          <a href="https://youtu.be/8RO1KevYoyQ" class="yt-btn" style="margin-bottom:12px;display:inline-block;" target="_blank" rel="noopener">Watch on YouTube</a>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/8RO1KevYoyQ" title="YouTube video player" frameborder="0" allowfullscreen style="margin-top:8px;"></iframe>
+        </div>
+        <div class="article-summary-card" style="background:#f8f6f2;padding:24px 24px 18px 24px;border-radius:14px;margin-bottom:32px;box-shadow:0 2px 12px rgba(0,0,0,0.04);">
+          <h2 style="margin:0 0 10px 0;font-size:1.4rem;color:#2D3047;font-weight:700;">Make.com: Using No Coding Platform to Build Release Notes Voice Assistant</h2>
+          <p style="margin:0;font-size:1.08rem;">How I automated my release notes workflow using Make.com, ChatGPT, Google Sheets, Google Docs, Telegram, and Deepgram—no code required!</p>
+        </div>
+        <div class="ai-card-desc" style="margin-bottom:18px;">
+          <div class="tip-card" style="background:#fff3f8;border-left:5px solid #E0A458;padding:16px 18px;border-radius:10px;margin-bottom:18px;">
+            <b>TL;DR:</b> This is my first AI tasker project—an end-to-end voice-to-release-notes automation using no-code tools. <br>Challenges and tips are highlighted for your convenience.
+          </div>
+          <h3 style="margin-top:0;">Context</h3>
+          <p>I wanted to learn about no-code, AI-driven solutions and realized my release notes process could be automated. The result: a Release Notes AI assistant that saves time and works from anywhere.</p>
+          <div class="challenge-card" style="background:#ffe6ea;border-left:5px solid #e57373;padding:12px 16px;border-radius:8px;margin-bottom:18px;"><b>Challenge:</b> Make.com does <u>not</u> auto-save. Always press the SAVE icon or risk losing your work!</div>
+          <div class="tip-card" style="background:#e6f7ff;border-left:5px solid #2D3047;padding:12px 16px;border-radius:8px;margin-bottom:18px;"><b>Tip:</b> Run your automation after each new module to catch errors early.</div>
+          <h3>Problem Statement</h3>
+          <p>Sharing release notes in Slack was time-consuming, even with ChatGPT. I needed a solution that worked on the go and reduced manual effort.</p>
+          <h3>Solution: <span style="font-size:1.1em;">🔁 End-to-End Voice-to-Release-Notes Integration</span></h3>
+          <div class="steps-section">
+            <div class="step-card"><span class="usecase-icon">🤖</span><b>Telegram Bot (Trigger):</b> Receives audio voice messages as the workflow's starting point.<br><span class="step-desc">Set up a Telegram bot with /BotFather, save the token, and connect it in Make.com.</span></div>
+            <div class="step-card"><span class="usecase-icon">🔗</span><b>HTTP Module #1 – Get File ID:</b> Retrieves the file ID for the voice message from Telegram.<br><span class="step-desc">Use an HTTPS GET request to Telegram's API to get the file_id.</span></div>
+            <div class="step-card"><span class="usecase-icon">📥</span><b>HTTP Module #2 – Get Compressed File:</b> Downloads the audio file using the file ID.<br><span class="step-desc">Another HTTPS GET request fetches the .oga file for transcription.</span></div>
+            <div class="step-card"><span class="usecase-icon">📝</span><b>HTTP Module #3 – Send Audio to Deepgram:</b> Sends the audio to Deepgram for transcription.<br><span class="step-desc">POST the audio to Deepgram's API with your token. Save your API key securely!</span></div>
+            <div class="step-card"><span class="usecase-icon">💬</span><b>ChatGPT Module #4:</b> Summarizes the transcript into clean, punchy release notes.<br><span class="step-desc">Send system and user messages to ChatGPT via OpenAI's API. Use clear instructions for best results.</span></div>
+            <div class="step-card"><span class="usecase-icon">📊</span><b>Google Sheets – Add Row:</b> Stores the date, transcript, and summary in a central sheet.<br><span class="step-desc">Connect Google Sheets and map your columns for easy tracking.</span></div>
+            <div class="step-card"><span class="usecase-icon">🔍</span><b>Google Sheets – Search Rows (Advanced):</b> Finds rows with Status = Draft to trigger the next step.<br><span class="step-desc">Use this as a trigger for document creation or further automation.</span></div>
+            <div class="step-card"><span class="usecase-icon">📄</span><b>Google Docs – Create Document:</b> Generates a formatted doc for review and sharing.<br><span class="step-desc">Map your fields and use HTML for custom formatting.</span></div>
+          </div>
+          <div class="challenge-card" style="background:#ffe6ea;border-left:5px solid #e57373;padding:12px 16px;border-radius:8px;margin-bottom:18px;"><b>Challenge:</b> Connecting to Notion failed due to workspace/ownership issues and Google's OAuth restrictions. Google Sheets is a reliable alternative.</div>
+          <h3>Key Takeaways</h3>
+          <ul>
+            <li>Always save your work in Make.com manually.</li>
+            <li>Run the flow after each module to catch errors and get real label references.</li>
+            <li>Google Sheets is easier to integrate than Notion for most users.</li>
+            <li>Use clear, role-based instructions for ChatGPT to get the best summaries.</li>
+            <li>Consider adding Slack integration as a final step for seamless sharing.</li>
+          </ul>
+        </div>
+      `;
+    } else {
+      contentDiv.innerHTML = `<div style='color:#c00;font-weight:600;'>Article not found.</div>`;
+    }
+  </script>
+</body>
+</html> 

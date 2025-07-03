@@ -11,100 +11,170 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 <body>
+    <nav class="side-nav" aria-label="Section navigation">
+        <ul>
+            <li><a href="#about-me-section">About Me</a></li>
+            <li><a href="#case-studies-section">Case Studies</a></li>
+            <li><a href="#soft-skills-section">Soft Skills</a></li>
+            <li><a href="#technologies-section">Technologies</a></li>
+            <li><a href="#pm-vlog-section">PM Vlog</a></li>
+            <li><a href="courses.html">Courses</a></li>
+        </ul>
+    </nav>
     <div class="main-wrapper">
         <!-- Header Section -->
         <header class="header">
             <div class="banner">
-                <div class="container">
-                    <h1 class="site-title">Mariia Riabushenko</h1>
-                    <div class="welcome-message">
-                        <p>Product Manager specializing in AI-driven product transformation and digital innovation</p>
+                <div class="container header-flex">
+                    <div class="header-info">
+                        <h1 class="site-title">Mariia Riabushenko</h1>
+                        <div class="header-subtitle">Where Product Strategy Meets AI Execution</div>
+                        <div style="font-size: 0.9rem; color: #666; margin-top: 8px; font-style: italic;">This site? 100% me + Cursor magic ❤️ Let's explore!</div>
+                        <div style="height: 18px;"></div>
                     </div>
                 </div>
             </div>
         </header>
+
+        <!-- About Me Section -->
+        <section class="about-me-section" id="about-me-section">
+            <div class="about-me-flex">
+                <img src="images/avatar.jpeg" alt="Mariia Riabushenko" class="about-avatar" />
+                <div class="about-me-content">
+                    <h2 class="about-me-name">About me</h2>
+                    <div class="about-intro">
+                        Passionate about leveraging AI and technology to transform products and drive business growth
+                    </div>
+                    <div class="about-expertise">
+                        <h3 class="about-header">Areas of Expertise</h3>
+                        <ul class="expertise-list">
+                            <li>CRM Systems</li>
+                            <li>ERP Platforms</li>
+                            <li>API Development</li>
+                            <li>Product Strategy</li>
+                            <li>Digital Transformation</li>
+                        </ul>
+                    </div>
+                    <div class="about-expansion">
+                        <h3 class="about-header">Expansion Areas</h3>
+                        <ul class="expansion-list">
+                            <li>Healthcare</li>
+                            <li>Civil Rights</li>
+                            <li>Education Technology</li>
+                        </ul>
+                    </div>
+                    <div class="about-skills">
+                        <h3 class="about-header">Core Skills</h3>
+                        <div class="skills-grid">
+                            <span class="skill-tag">Go-To-Market</span>
+                            <span class="skill-tag">Roadmap Planning</span>
+                            <span class="skill-tag">OKRs</span>
+                            <span class="skill-tag">Metrics & Analytics</span>
+                            <span class="skill-tag">User Acquisition</span>
+                            <span class="skill-tag">Product Strategy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Main Content -->
         <main class="main-content">
             <div class="container">
                 <!-- Profile Section (Moved from Sidebar) -->
                 <section class="profile-section">
-                    <div class="profile-photo">
-                        <img src="images/profile-photo.jpg" alt="Mariia Riabushenko" class="profile-image">
-                    </div>
                     <p class="profile-caption">
                         <em>Passionate about leveraging AI and technology to transform products and drive business growth</em>
                     </p>
                     <div class="contact-info">
-                        <a href="mailto:mariia@example.com" class="contact-link email">mariia@example.com</a>
-                        <a href="https://linkedin.com/in/mariia-riabushenko" class="contact-link linkedin" target="_blank" rel="noopener">LinkedIn</a>
+                        <button class="contact-link email" onclick="window.open('mailto:mariia.rya91@gmail.com', '_blank')">Send Email</button>
+                        <a href="https://www.linkedin.com/in/maria-riabushenko/" class="contact-link linkedin" target="_blank" rel="noopener">LinkedIn</a>
+                        <a href="https://www.youtube.com/@wonder_ai_mariia" class="contact-link youtube" target="_blank" rel="noopener">YouTube</a>
+                        <a href="resume.html" class="contact-link resume-label" style="color:#FF69B4; border-color:#FF69B4;" target="_blank" rel="noopener">Resume</a>
                     </div>
                 </section>
 
                 <!-- Main Content Area -->
                 <div class="content-area">
-                    <!-- Value Proposition & Skills -->
-                    <section class="value-proposition">
-                        <div class="location">
-                            <span class="location-icon">📍</span>
-                            <span>Toronto, Canada</span>
-                        </div>
-                        
-                        <div class="expertise-box">
-                            <h2>Areas of Expertise</h2>
-                            <ul class="expertise-list">
-                                <li>CRM Systems</li>
-                                <li>ERP Platforms</li>
-                                <li>API Development</li>
-                                <li>Product Strategy</li>
-                                <li>Digital Transformation</li>
-                            </ul>
-                        </div>
+                    <!-- Navigation Links -->
+                    <nav class="nav-links">
+                        <a href="pm-vlog.html" class="nav-link" id="pm-vlog-link">
+                            <span class="nav-icon">📹</span>
+                            <span>PM Vlog</span>
+                        </a>
+                        <a href="diagrams.html" class="nav-link">
+                            <span class="nav-icon">📊</span>
+                            <span>Diagrams Samples</span>
+                        </a>
+                        <a href="courses.html" class="nav-link" id="courses-section">
+                            <span class="nav-icon">🎓</span>
+                            <span>Courses</span>
+                        </a>
+                        <a href="hobbies.html" class="nav-link">
+                            <span class="nav-icon">🎨</span>
+                            <span>My Hobbies</span>
+                        </a>
+                    </nav>
 
-                        <div class="expansion-areas">
-                            <h3>Expansion Areas</h3>
-                            <p>Healthcare, Civil Rights, Education Technology</p>
-                        </div>
-
-                        <div class="skills-section">
-                            <h3>Core Skills</h3>
-                            <div class="skills-grid">
-                                <span class="skill-tag">Go-To-Market</span>
-                                <span class="skill-tag">Roadmap Planning</span>
-                                <span class="skill-tag">OKRs</span>
-                                <span class="skill-tag">Metrics & Analytics</span>
-                                <span class="skill-tag">User Acquisition</span>
-                                <span class="skill-tag">Product Strategy</span>
+                    <!-- Company Logos Section -->
+                    <section class="companies-section" style="margin: 48px 0 24px 0;">
+                        <header>
+                            <h2 class="companies-header">Companies I've Worked With</h2>
+                        </header>
+                        <div class="companies-logos" style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: center; align-items: flex-start;">
+                            <div class="company-card-flip">
+                                <div class="company-card-inner">
+                                    <div class="company-card-front">
+                                        <span style="font-weight:600; font-size:1.1rem; color:#2D3047;">EPAM</span>
+                                        <img src="images/epam_systems-logo_brandlogos.net_agjtz.png" alt="EPAM logo" style="height: 48px; margin: 12px 0 0 0; object-fit: contain;">
+                                        <div style="font-size: 0.95rem; color: #444; margin-top: 8px;">Global leader in digital platform engineering and software development services.</div>
+                                    </div>
+                                    <div class="company-card-back">
+                                        <div style="font-style: italic; color: #222;">As a Business Analyst and Product Owner, led a project for Nordstrom USA. Worked with Jira and Confluence to document the requirements, including BPMN diagramming and user flow.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="company-card-flip">
+                                <div class="company-card-inner">
+                                    <div class="company-card-front">
+                                        <span style="font-weight:600; font-size:1.1rem; color:#2D3047;">Nordstrom</span>
+                                        <img src="images/nordstrom.jpeg" alt="Nordstrom logo" style="height: 48px; margin: 12px 0 0 0; object-fit: contain;">
+                                        <div style="font-size: 0.95rem; color: #444; margin-top: 8px;">Leading US-based fashion retailer known for exceptional customer service and curated brands.</div>
+                                    </div>
+                                    <div class="company-card-back">
+                                        <div style="font-style: italic; color: #222;">As a Product Owner, streamlined a 0-1 Direct Delivery Services with a personal in-house Nordstrom products delivery. Prepared UI/UX design references for web and mobile views.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="company-card-flip">
+                                <div class="company-card-inner">
+                                    <div class="company-card-front">
+                                        <span style="font-weight:600; font-size:1.1rem; color:#2D3047;">BluePrism</span>
+                                        <img src="images/logo-blue-prism.png" alt="BluePrism logo" style="height: 48px; margin: 12px 0 0 0; object-fit: contain;">
+                                        <div style="font-size: 0.95rem; color: #444; margin-top: 8px;">Pioneer in Robotic Process Automation (RPA) and intelligent automation solutions.</div>
+                                    </div>
+                                    <div class="company-card-back">
+                                        <div style="font-style: italic; color: #222;">As a Product Owner, orchestrated the redesign of a desktop application into a web-browser version with a focus on Admin panel for RPA workflow management. Worked in cross-functional SAFe environment.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="company-card-flip">
+                                <div class="company-card-inner">
+                                    <div class="company-card-front">
+                                        <span style="font-weight:600; font-size:1.1rem; color:#2D3047;">Otolane</span>
+                                        <img src="images/otolane_logo.jpeg" alt="Otolane logo" style="height: 48px; margin: 12px 0 0 0; object-fit: contain;">
+                                        <div style="font-size: 0.95rem; color: #444; margin-top: 8px;">Canadian B2B automotive marketplace for wholesale vehicle trading and remarketing.</div>
+                                    </div>
+                                    <div class="company-card-back">
+                                        <div style="font-style: italic; color: #222;">As a Product Manager, leading a B2B SaaS project with data synchronization to Salesforce CRM. Led projects from scratch: logistics and transportation, fee management, floorplan program.</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
 
-                    <!-- Navigation Links -->
-                    <nav class="nav-links">
-                        <a href="#documentation" class="nav-link">
-                            <span class="nav-icon">📄</span>
-                            <span>Documentation Sample</span>
-                        </a>
-                        <a href="#diagrams" class="nav-link">
-                            <span class="nav-icon">📊</span>
-                            <span>Diagrams Samples</span>
-                        </a>
-                        <a href="#courses" class="nav-link">
-                            <span class="nav-icon">🎓</span>
-                            <span>Courses</span>
-                        </a>
-                        <a href="#hobbies" class="nav-link">
-                            <span class="nav-icon">🎨</span>
-                            <span>My Hobbies</span>
-                        </a>
-                        <a href="#vlog" class="nav-link">
-                            <span class="nav-icon">📹</span>
-                            <span>PM Vlog</span>
-                        </a>
-                    </nav>
-
                     <!-- Case Studies Section -->
-                    <section class="case-studies">
+                    <section class="case-studies" id="case-studies-section">
                         <h2>Case Studies</h2>
                         <div class="case-studies-grid">
                             <article class="case-study-card">
@@ -157,86 +227,85 @@
                                 </ul>
                             </article>
 
-                            <article class="case-study-card placeholder">
-                                <h3>AI Damage Detection</h3>
-                                <p class="coming-soon">Case study coming soon...</p>
+                            <article class="case-study-card">
+                                <h3>AI Damage Detection on Auction Images</h3>
+                                <p class="case-summary">AI-powered system detects, labels, and highlights damages in auction vehicle photos—improving image quality and building buyer trust.</p>
+                                <ul class="case-points">
+                                    <li>Automated damage detection and classification</li>
+                                    <li>Visual overlays highlight damaged areas</li>
+                                    <li>Enhanced trust and transparency for buyers</li>
+                                </ul>
                             </article>
                         </div>
                     </section>
 
                     <!-- Skills & Tools Section -->
-                    <section class="skills-tools">
-                        <div class="skills-tools-grid">
-                            <div class="soft-skills">
+                    <section class="skills-tools" id="soft-skills-section">
+                        <div class="skills-tools-cards">
+                            <div class="skills-card" id="technologies-section">
                                 <h3 class="section-header green">Soft Skills</h3>
-                                <ul class="skills-list">
-                                    <li>Strategic Thinking</li>
-                                    <li>Cross-functional Leadership</li>
-                                    <li>Data-Driven Decision Making</li>
-                                    <li>User-Centric Design</li>
-                                    <li>Agile Project Management</li>
-                                    <li>Stakeholder Communication</li>
-                                </ul>
+                                <div class="skills-badges">
+                                    <span class="skill-badge" title="Advocate for user needs">🧑‍💼 User Empathy</span>
+                                    <span class="skill-badge" title="Set and communicate product vision">🎯 Product Vision</span>
+                                    <span class="skill-badge" title="Inspire and align teams">�� Leadership</span>
+                                    <span class="skill-badge" title="Drive decisions with data">📊 Data-driven</span>
+                                    <span class="skill-badge" title="Facilitate agile ceremonies">⚡ Agile Facilitation</span>
+                                    <span class="skill-badge" title="Balance priorities and trade-offs">⚖️ Prioritization</span>
+                                    <span class="skill-badge" title="Build consensus among stakeholders">🤝 Stakeholder Alignment</span>
+                                    <span class="skill-badge" title="Tell compelling product stories">📖 Storytelling</span>
+                                    <span class="skill-badge" title="Always learning and iterating">🔄 Continuous Learning</span>
+                                </div>
                             </div>
-
-                            <div class="technologies">
+                            <div class="skills-card">
                                 <h3 class="section-header brown">Technologies & Tools</h3>
-                                <ol class="tech-list">
-                                    <li>Product Management: Jira, Confluence, Figma</li>
-                                    <li>Diagramming: Lucidchart, Miro, Draw.io</li>
-                                    <li>Prioritization: RICE, MoSCoW, Kano Model</li>
-                                    <li>API/Backend: Postman, Swagger, REST APIs</li>
-                                    <li>Requirements: User Stories, PRDs, BRDs</li>
-                                    <li>Security: OAuth, GDPR, Data Privacy</li>
-                                    <li>AI Tools: ChatGPT, Claude, Midjourney</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Goals Backlog Section -->
-                    <section class="goals-backlog">
-                        <h2>Goals Backlog</h2>
-                        <div class="goals-grid">
-                            <div class="goals-column">
-                                <h3 class="column-header">Not Started</h3>
-                                <div class="goal-card">
-                                    <h4>AWS Cloud Practitioner</h4>
-                                    <p>Cloud fundamentals certification</p>
-                                    <span class="owner">Mariia</span>
-                                </div>
-                                <div class="goal-card">
-                                    <h4>Advanced SQL Course</h4>
-                                    <p>Data analysis and query optimization</p>
-                                    <span class="owner">Mariia</span>
-                                </div>
-                            </div>
-
-                            <div class="goals-column">
-                                <h3 class="column-header">In Progress</h3>
-                                <div class="goal-card">
-                                    <h4>Product Analytics Certification</h4>
-                                    <p>Mixpanel and Amplitude mastery</p>
-                                    <span class="owner">Mariia</span>
-                                </div>
-                                <div class="goal-card">
-                                    <h4>Machine Learning Basics</h4>
-                                    <p>Understanding AI/ML fundamentals</p>
-                                    <span class="owner">Mariia</span>
-                                </div>
-                            </div>
-
-                            <div class="goals-column">
-                                <h3 class="column-header">Done</h3>
-                                <div class="goal-card">
-                                    <h4>Scrum Master Certification</h4>
-                                    <p>Agile methodology expertise</p>
-                                    <span class="owner">Mariia</span>
-                                </div>
-                                <div class="goal-card">
-                                    <h4>User Experience Design</h4>
-                                    <p>UX principles and best practices</p>
-                                    <span class="owner">Mariia</span>
+                                <div class="tech-group">
+                                    <h4>Discovery & Planning</h4>
+                                    <div class="tech-badges">
+                                        <span class="tech-badge" title="Expert">🧩 Miro <span class="tag expert">Expert</span></span>
+                                        <span class="tech-badge" title="Expert">🎨 Figma <span class="tag expert">Expert</span></span>
+                                        <span class="tech-badge" title="Expert">🧪 Maze <span class="tag expert">Expert</span></span>
+                                        <span class="tech-badge" title="Expert">🗺️ Productboard <span class="tag expert">Expert</span></span>
+                                        <span class="tech-badge" title="Expert">🛠️ Jira <span class="tag expert">Expert</span></span>
+                                        <span class="tech-badge" title="Expert">📋 Trello <span class="tag expert">Expert</span></span>
+                                    </div>
+                                    <h4>Analytics & Prototyping</h4>
+                                    <div class="tech-badges">
+                                        <span class="tech-badge" title="Intermediate">📈 Mixpanel <span class="tag intermediate">Intermediate</span></span>
+                                        <span class="tech-badge" title="Intermediate">📊 Amplitude <span class="tag intermediate">Intermediate</span></span>
+                                        <span class="tech-badge" title="Intermediate">📉 Google Analytics <span class="tag intermediate">Intermediate</span></span>
+                                        <span class="tech-badge" title="Expert">🎨 Figma <span class="tag expert">Expert</span></span>
+                                        <span class="tech-badge" title="Expert">✏️ Sketch <span class="tag expert">Expert</span></span>
+                                        <span class="tech-badge" title="Exploring">🧪 InVision <span class="tag exploring">Exploring</span></span>
+                                    </div>
+                                    <h4>Dev & Automation</h4>
+                                    <div class="tech-badges">
+                                        <span class="tech-badge" title="Intermediate">🔌 Postman <span class="tag intermediate">Intermediate</span></span>
+                                        <span class="tech-badge" title="Intermediate">🧰 Swagger <span class="tag intermediate">Intermediate</span></span>
+                                        <span class="tech-badge" title="Intermediate">🔗 REST APIs <span class="tag intermediate">Intermediate</span></span>
+                                        <span class="tech-badge" title="Expert">🤖 ChatGPT <span class="tag expert">Expert</span></span>
+                                        <span class="tech-badge" title="Expert">🎨 Midjourney <span class="tag expert">Expert</span></span>
+                                        <span class="tech-badge" title="Expert">🔗 Make.com <span class="tag expert">Expert</span></span>
+                                        <span class="tech-badge" title="Expert">⚡ Zapier <span class="tag expert">Expert</span></span>
+                                        <span class="tech-badge" title="Intermediate">🖱️ Cursor <span class="tag intermediate">Intermediate</span></span>
+                                    </div>
+                                    <h4>Collaboration & Requirements</h4>
+                                    <div class="tech-badges">
+                                        <span class="tech-badge" title="Expert">💬 Slack <span class="tag expert">Expert</span></span>
+                                        <span class="tech-badge" title="Expert">🗒️ Notion <span class="tag expert">Expert</span></span>
+                                        <span class="tech-badge" title="Expert">📚 Confluence <span class="tag expert">Expert</span></span>
+                                        <span class="tech-badge" title="Expert">📝 User Stories <span class="tag expert">Expert</span></span>
+                                        <span class="tech-badge" title="Expert">📄 PRDs <span class="tag expert">Expert</span></span>
+                                        <span class="tech-badge" title="Expert">📑 BRDs <span class="tag expert">Expert</span></span>
+                                        <span class="tech-badge" title="Expert">📊 RICE <span class="tag expert">Expert</span></span>
+                                        <span class="tech-badge" title="Expert">🗂️ MoSCoW <span class="tag expert">Expert</span></span>
+                                        <span class="tech-badge" title="Expert">🏷️ Kano Model <span class="tag expert">Expert</span></span>
+                                    </div>
+                                    <h4>Security & Privacy</h4>
+                                    <div class="tech-badges">
+                                        <span class="tech-badge" title="Expert">🔒 OAuth <span class="tag expert">Expert</span></span>
+                                        <span class="tech-badge" title="Expert">🛡️ GDPR <span class="tag expert">Expert</span></span>
+                                        <span class="tech-badge" title="Expert">🔐 Data Privacy <span class="tag expert">Expert</span></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
