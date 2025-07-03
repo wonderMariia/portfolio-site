@@ -803,6 +803,8 @@ body {
     position: relative !important;
     background: var(--color-background) !important;
     display: block !important;
+    opacity: 1 !important;
+    transition: opacity 0.3s;
 }
 
 .about-me-content {
@@ -1361,4 +1363,10 @@ body {
 }
 @media (max-width: 600px) {
   .vlog-banner { height: 100px; }
+}
+
+/* Always show company logos */
+.company-card-front img {
+  opacity: 1 !important;
+  transition: opacity 0.3s;
 } 
