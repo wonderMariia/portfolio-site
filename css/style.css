@@ -73,7 +73,7 @@ body {
 
 /* Main Wrapper */
 .main-wrapper {
-    max-width: 900px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: var(--spacing-md);
     background: var(--color-background);
@@ -352,9 +352,9 @@ body {
 
 /* Container */
 .container {
-    max-width: var(--container-max-width);
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 var(--spacing-md);
+    padding: 0 24px;
     width: 100%;
 }
 
@@ -1369,4 +1369,238 @@ body {
 .company-card-front img {
   opacity: 1 !important;
   transition: opacity 0.3s;
+}
+
+/* PM Vlog Section */
+.pm-vlog-section {
+  margin: var(--spacing-xl) 0;
+  padding: var(--spacing-xl) 0;
+}
+
+.pm-vlog-section h2 {
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.pm-vlog-content {
+  max-width: 100%;
+}
+
+.pm-vlog-intro {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.pm-vlog-intro p {
+  font-size: var(--font-size-large);
+  color: var(--color-text-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.pm-vlog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.pm-vlog-card {
+  background: var(--color-surface);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-lg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pm-vlog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.pm-vlog-card h3 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.pm-vlog-card p {
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.6;
+}
+
+.pm-vlog-link {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--color-secondary);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  transition: background 0.3s ease;
+}
+
+.pm-vlog-link:hover {
+  background: var(--color-primary);
+}
+
+/* Courses Section */
+.courses-section {
+  margin: var(--spacing-xl) 0;
+  padding: var(--spacing-xl) 0;
+}
+
+.courses-section h2 {
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.courses-content {
+  max-width: 100%;
+}
+
+.courses-intro {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.courses-intro p {
+  font-size: var(--font-size-large);
+  color: var(--color-text-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.course-card {
+  background: var(--color-surface);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.course-image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  transition: opacity 0.3s ease;
+}
+
+.course-image:hover {
+  opacity: 0.9;
+}
+
+.course-content {
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: 200px;
+}
+
+.course-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.course-details {
+  flex-grow: 1;
+  margin-bottom: var(--spacing-md);
+}
+
+.course-details p {
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+.course-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-sm);
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--font-size-small);
+  color: var(--color-text-light);
+  flex-wrap: wrap;
+}
+
+.course-meta span {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.courses-footer {
+  text-align: center;
+  margin-top: var(--spacing-lg);
+}
+
+.courses-link {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--color-secondary);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-medium);
+  transition: background 0.3s ease;
+}
+
+.courses-link:hover {
+  background: var(--color-primary);
+}
+
+/* Responsive Design for PM Vlog and Courses */
+@media (max-width: 768px) {
+  .pm-vlog-grid,
+  .courses-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  .pm-vlog-card,
+  .course-card {
+    padding: var(--spacing-md);
+  }
+  
+  .pm-vlog-section h2,
+  .courses-section h2 {
+    font-size: var(--font-size-xl);
+  }
+  
+  .pm-vlog-intro p,
+  .courses-intro p {
+    font-size: var(--font-size-base);
+  }
 } 

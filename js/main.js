@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'case-studies-section',
         'soft-skills-section',
         'technologies-section',
-        'vlog',
+        'pm-vlog-section',
         'courses-section'
     ];
     const sideNavLinks = Array.from(document.querySelectorAll('.side-nav a'));

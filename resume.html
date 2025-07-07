@@ -7,6 +7,30 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <style>
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            padding: var(--spacing-xs) var(--spacing-md);
+            background: none;
+            color: var(--color-primary);
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: var(--font-weight-medium);
+            border: 1px solid var(--color-primary);
+            font-size: var(--font-size-small);
+            transition: var(--transition-normal);
+            position: absolute;
+            top: var(--spacing-md);
+            left: var(--spacing-md);
+            z-index: 2;
+        }
+        
+        .back-link:hover {
+            background: var(--color-primary);
+            color: var(--color-background);
+            border-color: var(--color-primary);
+        }
+        
         .resume-header {
             display: flex;
             justify-content: space-between;
@@ -45,6 +69,12 @@
             background: #fff;
         }
         @media (max-width: 700px) {
+            .back-link {
+                position: relative;
+                top: auto;
+                left: auto;
+                margin-bottom: 16px;
+            }
             .resume-header {
                 flex-direction: column;
                 align-items: flex-start;
@@ -59,6 +89,7 @@
 </head>
 <body>
     <div class="main-wrapper">
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
         <div class="resume-header">
             <span class="resume-title">Resume</span>
             <a href="images/Resume - Riabushenko Mariia.pdf" download class="download-btn">Download PDF</a>

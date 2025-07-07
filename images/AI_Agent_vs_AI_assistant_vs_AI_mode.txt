@@ -1,0 +1,24 @@
+﻿As a Product Manager, I find myself learning more about AI every day, and I realized that even in the tech world, many people still mix up basic AI definitions. Terms like "AI agent," "AI model," "AI assistant," and "AI tasker" are thrown around casually, but they mean very different things. So, I decided to dig deeper and create a simple breakdown that could help other PMs navigate this AI-powered era more confidently.
+Here's a clear comparison table to understand the difference:
+Term
+	What It Is
+	Key Function
+	Example
+	AI Model
+	The "brain" trained on massive datasets to make predictions or generate content.
+	Provides intelligence; analyzes or generates outputs.
+	GPT-4, Gemini, Claude.
+	AI Assistant
+	A user-facing tool that uses an AI model to assist with tasks, usually through conversation.
+	Helps users complete tasks; interacts in natural language.
+	ChatGPT, Siri, Google Assistant.
+	AI Agent
+	An independent system that plans, reasons, and takes actions toward achieving a goal.
+	Acts autonomously across multiple steps.
+	AutoGPT, BabyAGI, MultiOn AI.
+	AI Tasker
+	Executes specific assigned tasks; does not independently plan beyond the given instruction.
+	Executes individual or small sets of tasks.
+	Zapier bots, Make.com AI scenarios.
+	Understanding the basic differences between AI models, assistants, agents, and taskers is crucial for product managers today. As we design features, prioritize AI integrations, or evaluate new solutions, being clear about "what type of AI" we're building with can change the entire user experience.
+I'm still learning every day, but this simple breakdown has already helped me ask better questions, set clearer goals, and avoid some common buzzword confusion.

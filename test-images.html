@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Test Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-image { margin: 20px 0; border: 2px solid #ccc; padding: 10px; }
+        .test-image img { max-width: 300px; height: auto; }
+        .error { color: red; }
+        .success { color: green; }
+    </style>
+</head>
+<body>
+    <h1>Image Loading Test</h1>
+    <p>This page tests if images are loading correctly from your server.</p>
+    
+    <div class="test-image">
+        <h3>Avatar Image</h3>
+        <img src="images/avatar.jpeg" alt="Avatar test" onload="this.parentElement.innerHTML += '<p class=\'success\'>✓ Loaded successfully</p>'" onerror="this.parentElement.innerHTML += '<p class=\'error\'>✗ Failed to load</p>'">
+    </div>
+    
+    <div class="test-image">
+        <h3>EPAM Logo</h3>
+        <img src="images/epam_systems-logo_brandlogos.net_agjtz.png" alt="EPAM logo test" onload="this.parentElement.innerHTML += '<p class=\'success\'>✓ Loaded successfully</p>'" onerror="this.parentElement.innerHTML += '<p class=\'error\'>✗ Failed to load</p>'">
+    </div>
+    
+    <div class="test-image">
+        <h3>State Diagram</h3>
+        <img src="images/state_diagram.png" alt="State diagram test" onload="this.parentElement.innerHTML += '<p class=\'success\'>✓ Loaded successfully</p>'" onerror="this.parentElement.innerHTML += '<p class=\'error\'>✗ Failed to load</p>'">
+    </div>
+    
+    <div class="test-image">
+        <h3>Banner Image</h3>
+        <img src="images/banner.png" alt="Banner test" onload="this.parentElement.innerHTML += '<p class=\'success\'>✓ Loaded successfully</p>'" onerror="this.parentElement.innerHTML += '<p class=\'error\'>✗ Failed to load</p>'">
+    </div>
+    
+    <script>
+        // Additional debugging
+        console.log('Testing image loading...');
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
+            images.forEach((img, index) => {
+                console.log(`Image ${index + 1}: ${img.src}`);
+                img.addEventListener('load', () => console.log(`✓ Image ${index + 1} loaded`));
+                img.addEventListener('error', () => console.log(`✗ Image ${index + 1} failed`));
+            });
+        });
+    </script>
+</body>
+</html> 
