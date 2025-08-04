@@ -463,3 +463,25 @@
         display: none;
     }
 } 
+
+@media (max-width: 767px) {
+    body, .main-wrapper, .header {
+        background: var(--color-bg) !important;
+        color: var(--color-text) !important;
+    }
+    .card, .profile-section, .case-study-card, .skills-card, .about-me-section, .expertise-box, .goal-card, .course-card {
+        background: var(--color-surface) !important;
+        color: var(--color-text) !important;
+    }
+    .nav-links, .side-nav {
+        background: var(--color-surface) !important;
+        border-radius: 2rem;
+        box-shadow: 0 2px 12px rgba(44, 44, 84, 0.12);
+    }
+    .nav-link, .side-nav a {
+        color: var(--color-text-secondary) !important;
+    }
+    .nav-link.active, .side-nav a.active {
+        color: var(--color-accent) !important;
+    }
+} 

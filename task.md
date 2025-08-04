@@ -4,3 +4,4 @@ Im not a developer so I prefer a simple stack like javascript, vanilla HTML and 
 
 Start with the scaffolding and layout with placeholder copy and I will add it later
 
+What 
