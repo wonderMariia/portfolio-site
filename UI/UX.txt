@@ -1,0 +1,171 @@
+1. Executive Summary
+Concept: A “Minimalist Clarity” portfolio tailored for recruiters, hiring managers, and startup leadership. The design emphasizes trust, AI-forward thinking, and human-centered innovation. It is clean, strategic, and conversion-optimized—with no distractions, clear calls to action, and strong visual branding aligned with your professional identity.
+2. Site Structure & Navigation
+Sitemap
+Home (/): Hero, Intro, Highlights, CTA
+About (/#about): Expand on expertise, values
+Certifications: Showcase credentials
+Projects: Case study previews
+Product Vlog: Embedded video content
+Contact: Simple form + social links
+Nav Labels & Order
+Top nav (left to right): Home (logo), About, Certifications, Projects, Product Vlog, Contact
+Sticky on scroll for ease of access
+URL Structure (SEO-friendly)
+/ → Home
+/projects
+/project/[slug] if detail pages are planned
+/#certifications, /#contact for direct clear anchors
+3. Hero & Key Screens
+Hero (Desktop + Mobile)
+Structure:
+Headline: “Mariia Riabushenko – Product Strategy Meets AI Execution”
+Subheadline: “Product Manager | AI Enthusiast | Human-Centered Innovator”
+Primary CTA: “Explore My Work” (scrolls to Projects)
+Secondary CTA: “Contact Me” (scrolls to contact form)
+Visual treatment: Left-aligned text, right-aligned circular or softly rounded headshot. Clean whitespace, light background, single accent color (blue-green) for buttons and links.
+On mobile: stacked; headshot appears above text, CTAs below.
+Project Detail Wireframe
+Title
+Hero image or diagram
+Overview: summary, role, tools
+Process: brief bullets or diagram
+Outcome: metrics, impact statements
+Back-to-Projects CTA or “Let’s Connect” prompt
+4. Visual System
+Color Palette
+Element	Hex Code
+Background	#FAFAFA
+Text Primary	#111111
+Accent	#2563EB
+Secondary Accent	#10B981
+Muted Text	#6B7280
+Use accent for buttons, hover, links.
+Typography Scale
+Font family: Inter (system fallback)
+h1: 3rem (48px)
+h2: 2.25rem (36px)
+h3: 1.875rem (30px)
+Body: 1rem (16px)
+Small/caption: 0.875rem (14px)
+Line-height: 1.5
+Spacing
+8pt scale → 8, 16, 24, 32, 48, 64px
+Imagery/Iconography
+Headshot: neutral background, 1:1 ratio
+Diagrams: clean vector style, branded accent highlights
+Logos: grayscale with accent hover effect
+5. Component Library / UI Kit
+Reusable Components
+Navbar (sticky, collapsible mobile toggle)
+Hero
+Section Header
+Project Card
+Embedded Video (Product Vlog)
+Contact Form
+Footer
+Component Code Examples (Plain HTML + Tailwind; adjust if tech stack differs)
+Navbar (navbar.html)
+<nav class="fixed top-0 w-full bg-white border-b">
+  <div class="max-w-4xl mx-auto flex justify-between items-center p-4">
+    <div class="text-xl font-bold">Mariia Riabushenko</div>
+    <ul class="hidden md:flex space-x-6">
+      <li><a href="#about" class="hover:text-blue-600">About</a></li>
+      <li><a href="#certifications" class="hover:text-blue-600">Certifications</a></li>
+      <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
+      <li><a href="#vlog" class="hover:text-blue-600">Product Vlog</a></li>
+      <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+    </ul>
+    <button class="md:hidden">Menu</button>
+  </div>
+</nav>
+Hero (hero.html)
+<section class="pt-24 pb-12">
+  <div class="max-w-4xl mx-auto text-center md:text-left">
+    <h1 class="text-4xl font-bold">Mariia Riabushenko – Product Strategy Meets AI Execution</h1>
+    <p class="mt-4 text-lg text-gray-700">Product Manager | AI Enthusiast | Human-Centered Innovator</p>
+    <div class="mt-6 space-x-4">
+      <a href="#projects" class="px-6 py-3 bg-blue-600 text-white rounded-lg">Explore My Work</a>
+      <a href="#contact" class="px-6 py-3 border border-blue-600 rounded-lg">Contact Me</a>
+    </div>
+  </div>
+</section>
+Project Card (project-card.html)
+<a href="#" class="block rounded-lg shadow hover:shadow-lg transition">
+  <div class="p-4">
+    <h3 class="text-2xl font-semibold">Project Title</h3>
+    <p class="text-gray-600">Short description of the project...</p>
+  </div>
+</a>
+Contact Form (contact.html)
+<section id="contact" class="py-12">
+  <h2 class="text-3xl font-bold text-center">Contact Me</h2>
+  <form class="mt-6 max-w-md mx-auto flex flex-col gap-4">
+    <input type="text" placeholder="Your Name" class="border p-3 rounded" />
+    <input type="email" placeholder="Your Email" class="border p-3 rounded" />
+    <textarea placeholder="Your Message" class="border p-3 rounded h-32"></textarea>
+    <button type="submit" class="px-6 py-3 bg-green-600 text-white rounded-lg">Send Message</button>
+  </form>
+</section>
+6. Project Template
+Case Study Fields & Order:
+Title
+Role & Timeline
+Summary / Overview
+Tech & Tools
+Challenge → Process → Outcome
+Diagrams / Screenshots
+Metrics / Impact (e.g., “Improved NPS by 15%”)
+Reflection / Learnings
+Mock Example (using your EPAM project):
+Title: Nordstrom CRM Strategy
+Role & Timeline: Product Owner at EPAM, Q2 2023
+Summary: Led CRM strategy, BPMN flows for Nordstrom
+Tech: Jira, Confluence, BPMN
+Challenge: Aligning workflows across support and marketing
+Process: Conducted stakeholder interviews, mapped user flows, iterated solution
+Outcome: Reduced time-to-resolution by 25%, improved support alignment
+Visuals: BPMN diagram export (PNG, 1200x800, compressed to <200kb)
+7. Microcopy & CTAs
+Hero: “Explore My Work” / “Contact Me”
+About Section: “Bridging strategy with AI execution.”
+Projects: “Case studies that deliver results.”
+Product Vlog: “See the thinking, not just the output.”
+Contact Form: “Let’s talk impact.”
+8. Accessibility & Performance Checklist
+Ensure color contrast ≥ 4.5:1 for text and UI elements
+Keyboard navigable; form inputs have labels or aria-labels
+Lazy-load images (use loading="lazy")
+Optimize images: Use WebP, compress <200 kb
+Meta viewport, language tag, alt texts
+Minimize layout shifts by reserving image space
+9. SEO & Social Preview
+Page Titles:
+Home: “Mariia Riabushenko – AI-Driven Product Manager Portfolio”
+Projects: “Projects – Mariia Riabushenko”
+Contact: “Contact – Mariia Riabushenko”
+Meta Descriptions:
+“Portfolio of Mariia Riabushenko: Product Manager with expertise in AI, CRM, ERP, and digital transformation.”
+Open Graph / Twitter Card:
+Image size: 1200 x 630px, JPG/PNG <200 kb
+Copy: Headline + "Explore real case studies in AI-driven product strategy."
+10. Implementation Plan & Deliverables
+Two-week Sprint Plan:
+Day 1–3: Create Figma wireframes & style guide (colors, type, spacing)
+Day 4–7: Build static HTML + Tailwind components (Navbar, Hero, Project Card, Contact Form)
+Day 8–10: Flesh out Projects section; integrate diagrams and case study content
+Day 11–12: Accessibility & performance optimizations, responsiveness testing
+Day 13–14: SEO, meta tags, Open Graph; deploy
+Deliverables:
+Figma file (wireframes + visual system)
+HTML/CSS component snippets
+Optimized image exports
+First 2-week priorities:
+Figma wireframe and visual direction
+Hero and Navbar code components
+Structure and wrapper for Projects and Contact sections
+11. Optional Enhancements
+Subtle animations: fade-in on scroll with CSS (opacity, transform)
+Hover microinteractions: button uplift, project card scale
+Analytics: track "Explore My Work" click and contact form submits
+Form handling: integrate form to email or Notion via Zapier or form backend

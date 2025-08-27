@@ -3,100 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Mariia Riabushenko Portfolio</title>
+    <title>Projects – Mariia Riabushenko</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <script>
+        // Mobile Navigation Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+                
+                // Close mobile menu when clicking a link
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
 </head>
 <body>
-    <!-- Sticky Top Navigation -->
-    <nav class="top-nav" aria-label="Main navigation">
+    <!-- Navigation - UX Document Structure -->
+    <nav class="navbar" aria-label="Main navigation">
         <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html" aria-label="Home">Wonder Mariia</a>
+            <div class="nav-brand">
+                <a href="index.html" aria-label="Home">Mariia Riabushenko</a>
             </div>
-            <ul class="nav-menu">
+            <ul class="nav-links">
                 <li><a href="index.html#about-me-section">About</a></li>
                 <li><a href="certifications.html">Certifications</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="pm-vlog.html">Product Vlog</a></li>
                 <li><a href="index.html#contact-section">Contact</a></li>
             </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
     <div class="main-wrapper">
-        <!-- Header Section -->
+        <!-- Header Section - UX Document Aligned -->
         <header class="hero-section" id="hero-section">
-            <div class="hero-content">
-                <h1 class="hero-title">Projects</h1>
-                <div class="hero-subtitle">Case Studies & Portfolio</div>
-                <p class="hero-tagline">Real-world projects showcasing product management expertise and technical solutions</p>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-headline">Projects</h1>
+                        <p class="hero-subheadline">Case studies that deliver results.</p>
+                        <p class="projects-intro">Real-world projects showcasing product management expertise and technical solutions</p>
+                    </div>
+                </div>
             </div>
         </header>
 
-        <!-- Case Studies Section -->
+        <!-- Case Studies Section - UX Document Template -->
         <section class="case-studies" id="case-studies-section">
-            <h2>Case Studies</h2>
-            <div class="case-studies-grid">
-                <article class="case-study-card">
-                    <h3>Marketplace and eCommerce</h3>
-                    <p class="case-summary">Led development of B2B marketplace platform with integrated payment systems</p>
-                    <ul class="case-points">
-                        <li>Increased user engagement by 40%</li>
-                        <li>Reduced transaction time by 60%</li>
-                        <li>Implemented real-time inventory tracking</li>
-                    </ul>
-                </article>
+            <div class="projects-container">
+                <h2 class="projects-title">Case Studies</h2>
+                <div class="case-studies-grid">
+                    <!-- Nordstrom CRM Strategy -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Nordstrom CRM Strategy</h3>
+                            <div class="project-meta">
+                                <span class="project-role">Product Owner at EPAM</span>
+                                <span class="project-timeline">Q2 2023</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-summary">Led CRM strategy and BPMN workflows for Nordstrom USA, focusing on aligning support and marketing teams.</p>
+                            <div class="project-tech">
+                                <strong>Tech & Tools:</strong> Jira, Confluence, BPMN
+                            </div>
+                            <div class="project-process">
+                                <strong>Challenge → Process → Outcome:</strong>
+                                <p>Aligning workflows across support and marketing → Conducted stakeholder interviews, mapped user flows, iterated solution → Reduced time-to-resolution by 25%, improved support alignment</p>
+                            </div>
+                        </div>
+                    </article>
 
-                <article class="case-study-card">
-                    <h3>Image-to-Text Odometer Recognition</h3>
-                    <p class="case-summary">Developed AI-powered OCR system for vehicle odometer reading</p>
-                    <ul class="case-points">
-                        <li>Achieved 95% accuracy rate</li>
-                        <li>Processed 10,000+ images daily</li>
-                        <li>Reduced manual processing time by 80%</li>
-                    </ul>
-                </article>
+                    <!-- AI Damage Detection -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">AI Damage Detection</h3>
+                            <div class="project-meta">
+                                <span class="project-role">Product Manager</span>
+                                <span class="project-timeline">2024</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-summary">Developed an AI solution to automatically detect and highlight damages in vehicle images for auction listings.</p>
+                            <div class="project-tech">
+                                <strong>Tech & Tools:</strong> AI/ML, Computer Vision, Image Processing
+                            </div>
+                            <div class="project-process">
+                                <strong>Challenge → Process → Outcome:</strong>
+                                <p>Manual damage inspection was slow and inconsistent → Implemented AI computer vision model with visual overlay system → Automated damage detection, improved buyer trust, enhanced bidding experience</p>
+                            </div>
+                        </div>
+                    </article>
 
-                <article class="case-study-card">
-                    <h3>CRM Platforms and Migrations</h3>
-                    <p class="case-summary">Managed migration from legacy CRM to modern cloud-based solution</p>
-                    <ul class="case-points">
-                        <li>Migrated 50,000+ customer records</li>
-                        <li>Zero downtime during transition</li>
-                        <li>Improved data accuracy by 30%</li>
-                    </ul>
-                </article>
+                    <!-- B2B Marketplace Platform -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">B2B Marketplace Platform</h3>
+                            <div class="project-meta">
+                                <span class="project-role">Product Manager</span>
+                                <span class="project-timeline">2023</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-summary">Led development of comprehensive B2B marketplace with integrated payment systems and real-time inventory tracking.</p>
+                            <div class="project-tech">
+                                <strong>Tech & Tools:</strong> REST APIs, Payment Gateway Integration, Real-time Systems
+                            </div>
+                            <div class="project-process">
+                                <strong>Challenge → Process → Outcome:</strong>
+                                <p>Fragmented B2B purchasing experience → Designed unified platform with integrated payments and inventory → Increased user engagement by 40%, reduced transaction time by 60%</p>
+                            </div>
+                        </div>
+                    </article>
 
-                <article class="case-study-card">
-                    <h3>REST API and Third-Party Integrations</h3>
-                    <p class="case-summary">Designed and implemented comprehensive API ecosystem</p>
-                    <ul class="case-points">
-                        <li>Built 15+ microservices</li>
-                        <li>Integrated 20+ third-party systems</li>
-                        <li>99.9% uptime achieved</li>
-                    </ul>
-                </article>
+                    <!-- RPA Workflow Management -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">RPA Workflow Management</h3>
+                            <div class="project-meta">
+                                <span class="project-role">Product Owner at BluePrism</span>
+                                <span class="project-timeline">2022-2023</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-summary">Orchestrated the redesign of desktop RPA application into web-browser version with focus on Admin panel.</p>
+                            <div class="project-tech">
+                                <strong>Tech & Tools:</strong> RPA, Web Applications, SAFe Methodology
+                            </div>
+                            <div class="project-process">
+                                <strong>Challenge → Process → Outcome:</strong>
+                                <p>Legacy desktop app limited accessibility → Led cross-functional team in SAFe environment to redesign as web app → Improved user accessibility, streamlined admin workflows, enhanced RPA management</p>
+                            </div>
+                        </div>
+                    </article>
 
-                <article class="case-study-card">
-                    <h3>Supply Chain Management</h3>
-                    <p class="case-summary">Optimized end-to-end supply chain visibility and automation</p>
-                    <ul class="case-points">
-                        <li>Reduced lead times by 25%</li>
-                        <li>Improved inventory accuracy by 90%</li>
-                        <li>Cut operational costs by 15%</li>
-                    </ul>
-                </article>
+                    <!-- Supply Chain Optimization -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Supply Chain Optimization</h3>
+                            <div class="project-meta">
+                                <span class="project-role">Product Manager at Otolane</span>
+                                <span class="project-timeline">2023-2024</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-summary">Led B2B SaaS project with data synchronization to Salesforce CRM, focusing on logistics, transportation, and fee management.</p>
+                            <div class="project-tech">
+                                <strong>Tech & Tools:</strong> Salesforce CRM, B2B SaaS, Data Synchronization
+                            </div>
+                            <div class="project-process">
+                                <strong>Challenge → Process → Outcome:</strong>
+                                <p>Disconnected supply chain systems → Built integrated platform with Salesforce sync → Reduced lead times by 25%, improved inventory accuracy by 90%, cut operational costs by 15%</p>
+                            </div>
+                        </div>
+                    </article>
 
-                <article class="case-study-card">
-                    <h3>AI Damage Detection on Auction Images</h3>
-                    <p class="case-summary">AI-powered system detects, labels, and highlights damages in auction vehicle photos—improving image quality and building buyer trust.</p>
-                    <ul class="case-points">
-                        <li>Automated damage detection and classification</li>
-                        <li>Visual overlays highlight damaged areas</li>
-                        <li>Enhanced trust and transparency for buyers</li>
-                    </ul>
-                </article>
+                    <!-- OCR Odometer Recognition -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">OCR Odometer Recognition</h3>
+                            <div class="project-meta">
+                                <span class="project-role">Product Manager</span>
+                                <span class="project-timeline">2023</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <p class="project-summary">Developed AI-powered OCR system for automated vehicle odometer reading from images.</p>
+                            <div class="project-tech">
+                                <strong>Tech & Tools:</strong> OCR, AI/ML, Computer Vision, Image Processing
+                            </div>
+                            <div class="project-process">
+                                <strong>Challenge → Process → Outcome:</strong>
+                                <p>Manual odometer reading was time-intensive and error-prone → Implemented AI-powered OCR with computer vision → Achieved 95% accuracy rate, processed 10,000+ images daily, reduced manual processing time by 80%</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="projects-cta">
+                    <a href="index.html#contact-section" class="btn btn-primary">Let's Connect</a>
+                </div>
             </div>
         </section>
     </div>
