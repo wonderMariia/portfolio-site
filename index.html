@@ -6,8 +6,7 @@
     <meta name="description" content="Portfolio of Mariia Riabushenko: Product Manager with expertise in AI, CRM, ERP, and digital transformation.">
     <meta name="keywords" content="product manager, portfolio, AI, CRM, ERP, API, product transformation, digital transformation">
     <title>Mariia Riabushenko – AI-Driven Product Manager Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/sherlaine-style.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <script>
         // Prevent page from scrolling to top on reload
@@ -39,7 +38,7 @@
                     e.preventDefault();
                     const target = document.querySelector(this.getAttribute('href'));
                     if (target) {
-                        const navHeight = document.querySelector('.navbar').offsetHeight;
+                        const navHeight = document.querySelector('.main-nav').offsetHeight;
                         const targetPosition = target.offsetTop - navHeight - 20;
                         
                         window.scrollTo({
@@ -50,21 +49,21 @@
                 });
             });
         });
+        
+
     </script>
 </head>
 <body>
-    <!-- Navigation - UX Document Structure -->
-    <nav class="navbar" aria-label="Main navigation">
+    <!-- Simple Navigation - Inspired by Sherlaine -->
+    <nav class="main-nav" aria-label="Main navigation">
         <div class="nav-container">
             <div class="nav-brand">
-                <a href="#hero-section" aria-label="Home">Mariia Riabushenko</a>
+                <a href="#hero-section">Mariia</a>
             </div>
-            <ul class="nav-links">
-                <li><a href="#about-me-section">About</a></li>
-                <li><a href="certifications.html">Certifications</a></li>
-                <li><a href="#case-studies-section">Projects</a></li>
-                <li><a href="pm-vlog.html">Product Vlog</a></li>
-                <li><a href="#contact-section">Contact</a></li>
+            <ul class="nav-menu">
+                <li><a href="#hero-section">Home</a></li>
+                <li><a href="#about-section">About</a></li>
+                <li><a href="#portfolio-section">Portfolio</a></li>
             </ul>
             <button class="nav-toggle" aria-label="Toggle navigation">
                 <span></span>
@@ -74,272 +73,224 @@
         </div>
     </nav>
     <div class="main-wrapper">
-        <!-- Hero Section - UX Document Aligned -->
+        <!-- Hero Section - Conversational & Personal -->
         <header class="hero-section" id="hero-section">
             <div class="hero-container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1 class="hero-headline">Mariia Riabushenko – Product Strategy Meets AI Execution</h1>
-                        <p class="hero-subheadline">Product Manager | AI Enthusiast | Human-Centered Innovator</p>
-                        <div class="hero-actions">
-                            <a href="#case-studies-section" class="btn btn-primary">Explore My Work</a>
-                            <a href="#contact-section" class="btn btn-secondary">Contact Me</a>
+                <div class="hero-intro">
+                    <h5 class="hero-greeting">So Mariia, tell us about yourself.</h5>
+                </div>
+                
+                <div class="hero-main">
+                    <div class="hero-hook">
+                        <h2 class="hero-title">AI & Product Strategy 🤖 - Need I say more?</h2>
+                    </div>
+                    
+                    <div class="hero-content">
+                        <div class="hero-text">
+                            <p class="hero-description">
+                                Hi! My name is Mariia (Wonder for short).<br><br>
+                                I'm a product professional passionate about leveraging AI to transform businesses. 
+                                I love diving deep into user problems, prototyping with cutting-edge AI tools, and 
+                                working with world-class teams to build products that actually matter. I am so passionate 
+                                about understanding user needs that I make data analysts look casual.
+                            </p>
+                            <a href="#about-section" class="learn-more-link">Learn more about me</a>
+                        </div>
+                        <div class="hero-image">
+                            <img src="images/avatar.jpeg" alt="Mariia Riabushenko" class="hero-avatar" />
                         </div>
                     </div>
-                    <div class="hero-image">
-                        <img src="images/avatar.jpeg" alt="Mariia Riabushenko" class="hero-avatar" />
-                    </div>
                 </div>
+                
                 <div class="hero-disclaimer">
-                    <p>This site? 100% me + Cursor magic ❤️ Let's explore!</p>
+                    <p>This site? 100% me + Cursor magic ❤️</p>
                 </div>
             </div>
         </header>
 
-        <!-- About Me Section -->
-        <section class="about-me-section" id="about-me-section">
-            <div class="about-me-flex">
-                <div class="about-me-content">
-                    <h2 class="about-me-name">About me</h2>
-                    <div class="about-intro">
-                        Passionate about leveraging AI and technology to transform products and drive business growth
+        <!-- Portfolio Section - Inspired by Sherlaine's MY WORK -->
+        <section class="portfolio-section" id="portfolio-section">
+            <div class="portfolio-container">
+                <div class="section-header">
+                    <h6 class="section-subtitle">Where all my blood, sweat, & tears go to</h6>
+                    <h2 class="section-title">MY WORK</h2>
+                </div>
+                
+                <div class="work-grid">
+                    <article class="work-item" onclick="window.location.href='nordstrom-project.html'">
+                        <h3 class="work-title">EPAM – Nordstrom Delivery Optimization</h3>
+                        <p class="work-description">
+                            Led delivery time & cost optimization across 50 U.S. states, reducing delivery time by 20% 
+                            and costs by 15% through modular microservice architecture and data-driven routing logic.
+                        </p>
+                        <span class="work-status">LIVE PROJECT</span>
+                        <div class="view-project">View Case Study →</div>
+                    </article>
+                    
+                    <article class="work-item">
+                        <h3 class="work-title">AI Damage Detection</h3>
+                        <p class="work-description">
+                            Developed an AI-powered system that automatically detects and highlights vehicle damages 
+                            in auction images, improving buyer trust and streamlining the bidding process.
+                        </p>
+                        <span class="work-status">LIVE PROJECT</span>
+                    </article>
+                    
+                    <article class="work-item">
+                        <h3 class="work-title">BluePrism – RPA Platform</h3>
+                        <p class="work-description">
+                            Orchestrated the redesign of desktop RPA application into a modern web platform, 
+                            enhancing accessibility and streamlining workflow management for enterprise clients.
+                        </p>
+                        <span class="work-status">LIVE PROJECT</span>
+                    </article>
+                    
+                    <article class="work-item">
+                        <h3 class="work-title">Otolane – Supply Chain SaaS</h3>
+                        <p class="work-description">
+                            Built B2B SaaS platform with Salesforce integration, reducing lead times by 25% 
+                            and cutting operational costs by 15% through automated logistics management.
+                        </p>
+                        <span class="work-status">LIVE PROJECT</span>
+                    </article>
+                </div>
+                
+                <div class="view-more">
+                    <a href="projects.html" class="view-more-link">VIEW MORE</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section - Inspired by Sherlaine -->
+        <section class="process-section" id="process-section">
+            <div class="process-container">
+                <div class="section-header">
+                    <h6 class="section-subtitle">This is how my brain works (most of the time)</h6>
+                    <h2 class="section-title">PROCESS</h2>
+                </div>
+                
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h4 class="step-title">1. DISCOVERY</h4>
+                        <p class="step-description">
+                            Stakeholder briefs me on requirements. I dive deep into user research, 
+                            competitive analysis, and market validation to understand the real problem.
+                        </p>
                     </div>
-                    <div class="about-expertise">
-                        <h3 class="about-header">Areas of Expertise</h3>
-                        <ul class="expertise-list">
-                            <li>CRM Systems</li>
-                            <li>ERP Platforms</li>
-                            <li>API Development</li>
-                            <li>Product Strategy</li>
-                            <li>Digital Transformation</li>
-                        </ul>
+                    
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h4 class="step-title">2. RESEARCH & ANALYSIS</h4>
+                        <p class="step-description">
+                            I analyze every data point, conduct user interviews, and study competitor strategies. 
+                            What are users actually doing vs. what they say they need?
+                        </p>
                     </div>
-                    <div class="about-expansion">
-                        <h3 class="about-header">Expansion Areas</h3>
-                        <ul class="expansion-list">
-                            <li>Healthcare</li>
-                            <li>Civil Rights</li>
-                            <li>Education Technology</li>
-                        </ul>
+                    
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h4 class="step-title">3. PROTOTYPE & ITERATE</h4>
+                        <p class="step-description">
+                            Rapid prototyping with AI tools, wireframing, and constant collaboration with 
+                            designers and developers. Test, learn, repeat.
+                        </p>
                     </div>
-                    <div class="about-skills">
-                        <h3 class="about-header">Core Skills</h3>
-                        <div class="skills-grid">
-                            <span class="skill-tag">Go-To-Market</span>
-                            <span class="skill-tag">Roadmap Planning</span>
-                            <span class="skill-tag">OKRs</span>
-                            <span class="skill-tag">Metrics & Analytics</span>
-                            <span class="skill-tag">User Acquisition</span>
-                            <span class="skill-tag">Product Strategy</span>
+                    
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h4 class="step-title">4. LAUNCH & MEASURE</h4>
+                        <p class="step-description">
+                            Deploy with proper metrics tracking, gather user feedback, analyze performance, 
+                            and iterate based on real usage data.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section - Personal Touch -->
+        <section class="about-section" id="about-section">
+            <div class="about-container">
+                <div class="section-header">
+                    <h6 class="section-subtitle">Well you made it this far 👀</h6>
+                    <h2 class="section-title">& now you want to know more about me</h2>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-main">
+                        <p class="about-description">
+                            I'm a product manager who believes that the best products are born from deep user empathy 
+                            and powered by smart technology. With experience at companies like EPAM, Nordstrom, and BluePrism, 
+                            I've learned that successful products aren't just about features—they're about solving real problems 
+                            in ways that feel almost magical to users.
+                        </p>
+                        
+                        <p class="about-description">
+                            When I'm not obsessing over user flows or diving into AI possibilities, you'll find me at the CrossFit gym, 
+                            dancing, or buried in a good book. I believe that diverse experiences make better product decisions.
+                        </p>
+                    </div>
+                    
+                    <div class="about-highlights">
+                        <h3 class="highlights-title">OTHER AWESOMENESS</h3>
+                        
+                        <div class="highlight-item">
+                            <h5>🤖 AI-First Product Mindset</h5>
+                            <p>
+                                Early adopter of AI tools for product development—from prompt engineering 
+                                to integrating ML models into user experiences.
+                            </p>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <h5>🏋️‍♀️ CrossFit Enthusiast</h5>
+                            <p>
+                                What CrossFit taught me about goal-setting, persistence, and strategic 
+                                planning translates directly to product management.
+                            </p>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <h5>📚 Continuous Learner</h5>
+                            <p>
+                                Always expanding my skills—from UofT Project Management to AI certifications, 
+                                because the best PMs never stop learning.
+                            </p>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <h5>🌍 Global Perspective</h5>
+                            <p>
+                                Experience working with international teams and understanding diverse user needs 
+                                across different markets and cultures.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section - UX Document Form -->
+        <!-- Contact Section - Simple like Sherlaine -->
         <section class="contact-section" id="contact-section">
             <div class="contact-container">
-                <h2 class="contact-title">Contact Me</h2>
-                <p class="contact-subtitle">Let's talk impact.</p>
-                
-                <form class="contact-form" action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Your Email</label>
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" name="message" placeholder="Your Message" rows="6" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-contact">Send Message</button>
-                </form>
+                <div class="contact-cta">
+                    <h2 class="contact-title">HIRE ME</h2>
+                    <a href="mailto:mariia.rya91@gmail.com" class="contact-email">mariia.rya91@gmail.com</a>
+                </div>
                 
                 <div class="contact-links">
-                    <a href="https://www.linkedin.com/in/maria-riabushenko/" class="social-link linkedin" target="_blank" rel="noopener">LinkedIn</a>
-                    <a href="https://www.youtube.com/@wonder_ai_mariia" class="social-link youtube" target="_blank" rel="noopener">YouTube</a>
-                    <a href="resume.html" class="social-link resume" target="_blank" rel="noopener">Resume</a>
+                    <a href="https://www.linkedin.com/in/maria-riabushenko/" class="social-link" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://www.youtube.com/@wonder_ai_mariia" class="social-link" target="_blank" rel="noopener">YouTube</a>
+                    <a href="resume.html" class="social-link" target="_blank" rel="noopener">Resume</a>
+                    <a href="pm-vlog.html" class="social-link">PM Vlog</a>
+                    <a href="certifications.html" class="social-link">Certifications</a>
                 </div>
             </div>
         </section>
 
-        <!-- Main Content -->
-        <main class="main-content">
-            <div class="container">
-                <!-- Profile Section (Moved from Sidebar) -->
-                <section class="profile-section">
-                    <p class="profile-caption">
-                        <em>Passionate about leveraging AI and technology to transform products and drive business growth</em>
-                    </p>
-                </section>
 
-                <!-- Main Content Area -->
-                <div class="content-area">
-                    <!-- Navigation Links -->
-                    <nav class="nav-links">
-                        <a href="diagrams.html" class="nav-link">
-                            <span class="nav-icon">📊</span>
-                            <span>Diagrams Samples</span>
-                        </a>
-                        <a href="hobbies.html" class="nav-link">
-                            <span class="nav-icon">🎨</span>
-                            <span>My Hobbies</span>
-                        </a>
-                    </nav>
 
-                    <!-- Company Logos Section -->
-                    <section class="companies-section" style="margin: 48px 0 24px 0;">
-                        <header>
-                            <h2 class="companies-header">Companies I've Worked With</h2>
-                        </header>
-                        <div class="companies-logos" style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: center; align-items: flex-start;">
-                            <div class="company-card-flip">
-                                <div class="company-card-inner">
-                                    <div class="company-card-front">
-                                        <span style="font-weight:600; font-size:1.1rem; color:#2D3047;">EPAM</span>
-                                        <img src="images/epam_systems-logo_brandlogos.net_agjtz.png" alt="EPAM logo" style="height: 48px; margin: 12px 0 0 0; object-fit: contain;">
-                                        <div style="font-size: 0.95rem; color: #444; margin-top: 8px;">Global leader in digital platform engineering and software development services.</div>
-                                    </div>
-                                    <div class="company-card-back">
-                                        <div style="font-style: italic; color: #222;">As a Business Analyst and Product Owner, led a project for Nordstrom USA. Worked with Jira and Confluence to document the requirements, including BPMN diagramming and user flow.</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="company-card-flip">
-                                <div class="company-card-inner">
-                                    <div class="company-card-front">
-                                        <span style="font-weight:600; font-size:1.1rem; color:#2D3047;">Namecheap</span>
-                                        <img src="images/namecheap.png" alt="Namecheap logo" style="height: 48px; margin: 12px 0 0 0; object-fit: contain;">
-                                        <div style="font-size: 0.95rem; color: #444; margin-top: 8px;">Leading domain registrar and web services provider.</div>
-                                    </div>
-                                    <div class="company-card-back">
-                                        <div style="font-style: italic; color: #222;">As a Team Lead of Customer Support Team, I was responsible for improving teams performance and setting up KPI metrics, as well as educating the team on the best way to achieve them and grow NPS and company's profit.</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="company-card-flip">
-                                <div class="company-card-inner">
-                                    <div class="company-card-front">
-                                        <span style="font-weight:600; font-size:1.1rem; color:#2D3047;">Nordstrom</span>
-                                        <img src="images/nordstrom.jpeg" alt="Nordstrom logo" style="height: 48px; margin: 12px 0 0 0; object-fit: contain;">
-                                        <div style="font-size: 0.95rem; color: #444; margin-top: 8px;">Leading US-based fashion retailer known for exceptional customer service and curated brands.</div>
-                                    </div>
-                                    <div class="company-card-back">
-                                        <div style="font-style: italic; color: #222;">As a Product Owner, streamlined a 0-1 Direct Delivery Services with a personal in-house Nordstrom products delivery. Prepared UI/UX design references for web and mobile views.</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="company-card-flip">
-                                <div class="company-card-inner">
-                                    <div class="company-card-front">
-                                        <span style="font-weight:600; font-size:1.1rem; color:#2D3047;">BluePrism</span>
-                                        <img src="images/logo-blue-prism.png" alt="BluePrism logo" style="height: 48px; margin: 12px 0 0 0; object-fit: contain;">
-                                        <div style="font-size: 0.95rem; color: #444; margin-top: 8px;">Pioneer in Robotic Process Automation (RPA) and intelligent automation solutions.</div>
-                                    </div>
-                                    <div class="company-card-back">
-                                        <div style="font-style: italic; color: #222;">As a Product Owner, orchestrated the redesign of a desktop application into a web-browser version with a focus on Admin panel for RPA workflow management. Worked in cross-functional SAFe environment.</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="company-card-flip">
-                                <div class="company-card-inner">
-                                    <div class="company-card-front">
-                                        <span style="font-weight:600; font-size:1.1rem; color:#2D3047;">Otolane</span>
-                                        <img src="images/otolane_logo.jpeg" alt="Otolane logo" style="height: 48px; margin: 12px 0 0 0; object-fit: contain;">
-                                        <div style="font-size: 0.95rem; color: #444; margin-top: 8px;">Canadian B2B automotive marketplace for wholesale vehicle trading and remarketing.</div>
-                                    </div>
-                                    <div class="company-card-back">
-                                        <div style="font-style: italic; color: #222;">As a Product Manager, leading a B2B SaaS project with data synchronization to Salesforce CRM. Led projects from scratch: logistics and transportation, fee management, floorplan program.</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Skills & Tools Section -->
-                    <section class="skills-tools" id="soft-skills-section">
-                        <div class="skills-tools-cards">
-                            <div class="skills-card" id="technologies-section">
-                                <h3 class="section-header green">Soft Skills</h3>
-                                <div class="skills-badges">
-                                    <span class="skill-badge" title="Advocate for user needs">🧑‍💼 User Empathy</span>
-                                    <span class="skill-badge" title="Set and communicate product vision">🎯 Product Vision</span>
-                                    <span class="skill-badge" title="Inspire and align teams">👥 Leadership</span>
-                                    <span class="skill-badge" title="Drive decisions with data">📊 Data-driven</span>
-                                    <span class="skill-badge" title="Facilitate agile ceremonies">⚡ Agile Facilitation</span>
-                                    <span class="skill-badge" title="Balance priorities and trade-offs">⚖️ Prioritization</span>
-                                    <span class="skill-badge" title="Build consensus among stakeholders">🤝 Stakeholder Alignment</span>
-                                    <span class="skill-badge" title="Tell compelling product stories">📖 Storytelling</span>
-                                    <span class="skill-badge" title="Always learning and iterating">🔄 Continuous Learning</span>
-                                </div>
-                            </div>
-                            <div class="skills-card">
-                                <h3 class="section-header brown">Technologies & Tools</h3>
-                                <div class="tech-group">
-                                    <h4>Discovery & Planning</h4>
-                                    <div class="tech-badges">
-                                        <span class="tech-badge" title="Expert">🧩 Miro <span class="tag expert">Expert</span></span>
-                                        <span class="tech-badge" title="Expert">🎨 Figma <span class="tag expert">Expert</span></span>
-                                        <span class="tech-badge" title="Expert">🗺️ Productboard <span class="tag expert">Expert</span></span>
-                                        <span class="tech-badge" title="Expert">🛠️ Jira <span class="tag expert">Expert</span></span>
-                                        <span class="tech-badge" title="Expert">📋 Trello <span class="tag expert">Expert</span></span>
-                                    </div>
-                                    <h4>Analytics & Prototyping</h4>
-                                    <div class="tech-badges">
-                                        <span class="tech-badge" title="Expert">SQL queries <span class="tag expert">Expert</span></span>
-                                        <span class="tech-badge" title="Expert">Lucidchart <span class="tag expert">Expert</span></span>
-                                        <span class="tech-badge" title="Intermediate">📉 Google Analytics <span class="tag intermediate">Intermediate</span></span>
-                                        <span class="tech-badge" title="Expert">🎨 Figma <span class="tag expert">Expert</span></span>
-                                        <span class="tech-badge" title="Expert">✏️ Sketch <span class="tag expert">Expert</span></span>
-                                        <span class="tech-badge" title="Exploring">🧪 InVision <span class="tag exploring">Exploring</span></span>
-                                    </div>
-                                    <h4>Dev & Automation</h4>
-                                    <div class="tech-badges">
-                                        <span class="tech-badge" title="Intermediate">🔌 Postman <span class="tag intermediate">Intermediate</span></span>
-                                        <span class="tech-badge" title="Intermediate">🧰 Swagger <span class="tag intermediate">Intermediate</span></span>
-                                        <span class="tech-badge" title="Intermediate">🔗 REST APIs <span class="tag intermediate">Intermediate</span></span>
-                                        <span class="tech-badge" title="Expert">🤖 ChatGPT <span class="tag expert">Expert</span></span>
-                                        <span class="tech-badge" title="Expert">🎨 Midjourney <span class="tag expert">Expert</span></span>
-                                        <span class="tech-badge" title="Expert">🔗 Make.com <span class="tag expert">Expert</span></span>
-                                        <span class="tech-badge" title="Expert">⚡ Zapier <span class="tag expert">Expert</span></span>
-                                        <span class="tech-badge" title="Intermediate">🖱️ Cursor <span class="tag intermediate">Intermediate</span></span>
-                                    </div>
-                                    <h4>Collaboration & Requirements</h4>
-                                    <div class="tech-badges">
-                                        <span class="tech-badge" title="Expert">💬 Slack <span class="tag expert">Expert</span></span>
-                                        <span class="tech-badge" title="Expert">🗒️ Notion <span class="tag expert">Expert</span></span>
-                                        <span class="tech-badge" title="Expert">📚 Confluence <span class="tag expert">Expert</span></span>
-                                        <span class="tech-badge" title="Expert">📝 User Stories <span class="tag expert">Expert</span></span>
-                                        <span class="tech-badge" title="Expert">📄 PRDs <span class="tag expert">Expert</span></span>
-                                        <span class="tech-badge" title="Expert">📑 BRDs <span class="tag expert">Expert</span></span>
-                                        <span class="tech-badge" title="Expert">📊 RICE <span class="tag expert">Expert</span></span>
-                                        <span class="tech-badge" title="Expert">🗂️ MoSCoW <span class="tag expert">Expert</span></span>
-                                        <span class="tech-badge" title="Expert">🏷️ Kano Model <span class="tag expert">Expert</span></span>
-                                    </div>
-                                    <h4>Security & Privacy</h4>
-                                    <div class="tech-badges">
-                                        <span class="tech-badge" title="Expert">🔒 OAuth <span class="tag expert">Expert</span></span>
-                                        <span class="tech-badge" title="Expert">🛡️ GDPR <span class="tag expert">Expert</span></span>
-                                        <span class="tech-badge" title="Expert">🔐 Data Privacy <span class="tag expert">Expert</span></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </main>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <p>© 2024 Mariia Riabushenko. All rights reserved.</p>
-            </div>
-        </footer>
     </div>
 
     <script src="js/main.js"></script>

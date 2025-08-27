@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nordstrom Delivery Optimization - Mariia Riabushenko</title>
+    <link rel="stylesheet" href="css/sherlaine-style.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+    <!-- Simple Navigation -->
+    <nav class="main-nav" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html">Mariia</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about-section">About</a></li>
+                <li><a href="index.html#portfolio-section">Portfolio</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-wrapper">
+        <!-- Project Header -->
+        <section class="project-page-header">
+            <div class="project-page-container">
+                <a href="index.html" class="back-link">← Back to Portfolio</a>
+                <h1 class="project-page-title">Nordstrom – Delivery Time & Cost Optimization Across 50 States</h1>
+                <div class="project-page-meta">
+                    <span class="project-role"><strong>Role:</strong> Product Owner at EPAM</span>
+                    <span class="project-scope"><strong>Scope:</strong> Discovery → MVP Scope → WBS → Architecture → Implementation → Delivery</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Content -->
+        <section class="project-page-content">
+            <div class="project-page-container">
+                
+                <div class="project-section">
+                    <h2>Problem</h2>
+                    <p>Nordstrom needed to enhance its direct delivery service by reducing delivery time and cost across all 50 U.S. states served by its stores. The existing system was inconsistent—some regions experienced longer lead times and higher shipping expenses—which affected customer satisfaction and profitability.</p>
+                </div>
+                
+                <div class="project-section">
+                    <h2>Insights</h2>
+                    <ul>
+                        <li>Conducted cross-state logistic analysis, uncovering areas with outdated routing and warehousing inefficiencies.</li>
+                        <li>Mapped current processes: spoke with fulfillment teams, delivery partners, and store ops to understand bottlenecks.</li>
+                        <li>Benchmarked against industry standards, noting where faster and more cost-efficient models existed.</li>
+                        <li>Extracted critical variables—distance, delivery volume, carrier rates, and regional demand—to prioritize improvements.</li>
+                    </ul>
+                </div>
+                
+                <div class="project-section">
+                    <h2>Solution</h2>
+                    
+                    <div class="solution-phase">
+                        <h3>Discovery Phase</h3>
+                        <ul>
+                            <li>Delivered a comprehensive needs assessment report outlining key pain points and opportunity zones.</li>
+                            <li>Defined MVP scope: implement standardized routing logic for top 30 shipping ZIP clusters and cost tiers.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="solution-phase">
+                        <h3>Work Breakdown Structure (WBS)</h3>
+                        <p>Organized tasks into:</p>
+                        <ul>
+                            <li>Logistics mapping</li>
+                            <li>Requirements documentation</li>
+                            <li>Stakeholder alignment</li>
+                            <li>API integrations with carriers</li>
+                            <li>MVP deployment planning</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="solution-phase">
+                        <h3>Architectural Decisions</h3>
+                        <ul>
+                            <li>Proposed modular, microservice-based architecture to decouple routing logic, cost calculation, and carrier integration.</li>
+                            <li>Selected cloud-hosted compute nodes for scalability and leveraged cache layers (Redis) for fast rate lookups.</li>
+                            <li>Integrated a tiered fallback system to maintain operations if primary routing services were delayed.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="solution-phase">
+                        <h3>Implementation & Delivery</h3>
+                        <ul>
+                            <li>Oversaw development in agile sprints (two-week cadence).</li>
+                            <li>Coordinated across engineering teams, logistics partners, and store operations to ensure end-to-end accountability.</li>
+                            <li>Implemented MVP with phased rollout, beginning with pilot regions.</li>
+                            <li>Monitored performance and iterated rapidly—tweaked routing thresholds, carrier prioritizations, and fallback logic as needed.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project-section">
+                    <h2>Results</h2>
+                    <div class="results-grid">
+                        <div class="result-item">
+                            <div class="result-number">20%</div>
+                            <div class="result-description">Reduced average delivery time, especially in underperforming regions</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-number">15%</div>
+                            <div class="result-description">Reduced per-order delivery costs, driving higher margin on direct-to-consumer fulfillment</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-icon">🚀</div>
+                            <div class="result-description">Provided the framework for future scaling—Nordstrom now has a modular, resilient system to optimize deliveries across its entire store network</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-section">
+                    <h2>Implementation Process – Summary</h2>
+                    <div class="process-summary">
+                        <div class="process-item">
+                            <strong>Discovery & Investigation</strong><br>
+                            Baseline analytics, interviews, cross-functional alignment.
+                        </div>
+                        <div class="process-item">
+                            <strong>Define MVP & WBS</strong><br>
+                            Target ZIP clusters, prioritized tasks, phased deployment.
+                        </div>
+                        <div class="process-item">
+                            <strong>Architectural Planning</strong><br>
+                            Modular design with microservices, caching, fallback logic.
+                        </div>
+                        <div class="process-item">
+                            <strong>Sprint Implementation</strong><br>
+                            Agile development, stakeholder testing, pilot rollout.
+                        </div>
+                        <div class="process-item">
+                            <strong>Monitoring & Iteration</strong><br>
+                            Performance tracking, tuning, regional expansion.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation to other projects -->
+                <div class="project-navigation">
+                    <a href="index.html#portfolio-section" class="nav-button">← Back to All Projects</a>
+                    <a href="index.html#contact-section" class="nav-button primary">Let's Connect →</a>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
