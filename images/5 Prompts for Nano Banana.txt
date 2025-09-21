@@ -1,0 +1,51 @@
+﻿[1.png picture]
+
+
+
+
+1. Turn black and white picture into color
+Colorize the uploaded old photograph of [character in the picture]. Add natural, realistic colors while keeping the vintage feel. [Add character description, e.g. hair should be blonde, eyes should be green] - reflect that accurately. Apply subtle skin tones, natural fabric colors for clothing, and a balanced background tone. Ensure the restored image looks authentic, not overly modernized.
+
+
+[2.png picture]
+
+
+2. Combine a few pictures into one photo
+Combine the uploaded [main photo description, e.g. living room] with the attached [element 1] and [element 2] images. Place [element 1] naturally next to the couch of the living room, making sure proportions, lighting, and shadows match the environment. Arrange the decor items realistically on the wall above the sofa in a stylish way, blending seamlessly with the room’s existing design.
+
+
+[3.png picture]
+
+
+3. Turn a photo into a watercolor illustration
+Turn the photo of a [character in the picture] into a high-fashion illustration in delicate watercolor technique. Soft brush strokes, pastel color palette, elegant textures, and fluid lines. Emphasize stylish clothing details and graceful posture. Minimal background, like a sketchbook illustration for a fashion magazine.
+
+
+[4.png picture]
+
+
+4. Replace some elements in the picture
+
+
+Replace the [element 1] in this photo with a realistic [element 2], matching the same perspective, lighting, and style as the original. Keep all other elements of the scene unchanged.
+
+
+[5.png picture]
+
+
+5. Change the background 
+
+
+My example #1: Replace the current background with a dynamic ocean scene, showing waves and surfboards. Position the girl so it looks like she is surfing in the ocean, keeping her outfit, pose, and details exactly the same. Adjust lighting and shadows to match the bright outdoor beach environment, creating a natural, action-shot effect.
+
+
+My example #2: Change the background from a skyscraper view to the inside of a cozy Starbucks coffee shop. Keep the objects in the foreground exactly the same, with consistent lighting and shadows. Blend naturally with the Starbucks interior — wooden tables, coffee 
+counter, warm lights, and branded details — so it looks like a real photo taken inside the café.
+
+
+Note: In your example, create a detailed description for the background the model should change for the image.
+
+
+
+
+[6.png picture]
